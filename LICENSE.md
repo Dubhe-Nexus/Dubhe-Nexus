@@ -1,8 +1,11 @@
 # Open Source Licenses
 
+> **Important Notice:**
+> This repository contains both open-source and proprietary materials. The licenses below apply **ONLY** to specific files or web pages that explicitly display a footer or header reference to these licenses.
+
 ---
 
-### 1. Software License (MIT License)
+### Software License (MIT License)
 
 **Copyright (C) 2026 Dubhe Nexus Innovation and Research Studio**
 
@@ -14,7 +17,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 ---
 
-### 2. Documentation & Creative Content (CC BY 4.0)
+### Documentation & Creative Content (CC BY 4.0)
 
 The documentation and creative content of this project are licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 
@@ -26,4 +29,10 @@ The documentation and creative content of this project are licensed under [Creat
 * **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
 
 ---
-© 2026 **Dubhe Nexus Innovation and Research Studio**
+
+### Proprietary Rights
+All other parts of this project, including core logic, private configurations, 
+and pages without the aforementioned license footers, are **Proprietary**. 
+
+---
+**© 2026 Dubhe Nexus Innovation and Research Studio All Rights Reserved.**
