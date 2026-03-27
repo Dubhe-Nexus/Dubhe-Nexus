@@ -1,0 +1,244 @@
+<!-- © 2026 Dubhe Nexus Innovation and Research Studio -->
+<!-- Licensed under MIT License -->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>天枢互联 | Dubhe Nexus</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap"
+        rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <nav class="glass-nav" id="navbar">
+        <div class="nav-container">
+            <div class="logo">天枢互联 Dubhe Nexus</div>
+            <div class="nav-links">
+                <a href="#philosophy"><i data-lucide="compass" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>理念</a>
+                <a href="#projects"><i data-lucide="layers" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>项目</a>
+                <a href="#about"><i data-lucide="info" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>关于我们</a>
+                <a href="#contact"><i data-lucide="mail" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>联系我们</a>
+                <a href="en/home.html" class="lang-switch"><i data-lucide="languages" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+            <div>
+                <div class="hero-eyebrow">创新 · 构建 · 迭代 · 因势而变</div>
+                <h1 class="hero-title">
+                    专注模拟飞行<br>
+                    <span>工具开发与数据探索</span>
+                </h1>
+                <div class="hero-desc">
+                    <p>天枢互联创研工作室<br>Dubhe Nexus Innovation and Research Studio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+
+            <section id="philosophy" class="philosophy-section">
+                <div class="section-tag fade-up">Team Philosophy</div>
+                <div class="section-title fade-up">团队理念</div>
+                <div class="philosophy-grid">
+                    <div class="pillar-card scale-in">
+                        <h3>知行合一</h3>
+                        <p>行动，永远优先于完美。比起漫长的等待，我们更倾向于让想法迅速落地，在真实场景中验证功能价值。</p>
+                    </div>
+                    <div class="pillar-card scale-in">
+                        <h3>抱朴守拙</h3>
+                        <p>拒绝过度设计与复杂内耗。保持简约、低成本、高效率，是我们对抗开发混乱的核心原则。</p>
+                    </div>
+                    <div class="pillar-card scale-in">
+                        <h3>顺势而为</h3>
+                        <p>用户需求与即时反馈决定项目走向。我们根据实际使用场景，动态调整功能的开发优先级。</p>
+                    </div>
+                    <div class="pillar-card scale-in">
+                        <h3>生生不息</h3>
+                        <p>每一次发布都不是终点，而是进化的起点。在持续迭代中优化产品，在变化中保持生命力。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="projects-section">
+                <div class="section-tag fade-up">Products and Services</div>
+                <div class="section-title fade-up">产品与服务</div>
+                <div class="projects-sub fade-up">专注航空数据处理与社区工具建设</div>
+
+                <div class="projects-grid">
+                    <a href="https://api.dubhenexus.org" target="_blank" rel="noopener noreferrer"
+                        class="project-card scale-in">
+                        <div class="project-badge">数据服务</div>
+                        <div class="project-title">API文档中心</div>
+                        <div class="project-desc">提供 METAR、TAF 及全球机场基础数据的整合与结构化分发，助力开发者快速调用</div>
+                        <div class="project-link">访问 →</div>
+                    </a>
+                    <a href="https://api.dubhenexus.org" target="_blank" rel="noopener noreferrer"
+                        class="project-card scale-in">
+                        <div class="project-badge">数据服务</div>
+                        <div class="project-title">服务中心</div>
+                        <div class="project-desc">提供全球机场（仅限有公开数据的机场）实时 METAR，TAF及机场数据查询</div>
+                        <div class="project-link">访问 →</div>
+                    </a>
+                    <a href="https://game.dubhenexus.org" target="_blank" rel="noopener noreferrer"
+                        class="project-card scale-in">
+                        <div class="project-badge">游戏</div>
+                        <div class="project-title">小游戏</div>
+                        <div class="project-desc">一系列轻量化网页小游戏，旨在提升开发技能并提供趣味性交互</div>
+                        <div class="project-link">访问 →</div>
+                    </a>
+                    <a href="https://www.virtual-vaahk.org" target="_blank" rel="noopener noreferrer"
+                        class="project-card scale-in">
+                        <div class="project-badge">社区平台</div>
+                        <div class="project-title">虚拟香港机场管理局 VAAHK</div>
+                        <div class="project-desc">虚拟香港机场管理局 VAAHK 官网</div>
+                        <div class="project-link">访问 →</div>
+                    </a>
+                </div>
+            </section>
+
+            <section id="technology-stack" class="technology-stack-section">
+                <div class="container">
+                    <div class="section-tag fade-up">Technology Stack</div>
+                    <div class="section-title fade-up">技术栈</div>
+
+                    <div class="technology-stack-grid">
+                        <div class="tech-group scale-in">
+                            <div class="group-header">
+                                <span class="group-no">01</span>
+                                <span class="group-label">前端核心技术</span>
+                            </div>
+                            <div class="tech-list">
+                                <div class="tech-item-mini">HTML</div>
+                                <div class="tech-item-mini">CSS</div>
+                                <div class="tech-item-mini">Tailwind CSS</div>
+                                <div class="tech-item-mini">JavaScript</div>
+                                <div class="tech-item-mini">JavaScript XML</div>
+                                <div class="tech-item-mini">TypeScript</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-group scale-in">
+                            <div class="group-header">
+                                <span class="group-no">02</span>
+                                <span class="group-label">前端框架与生态</span>
+                            </div>
+                            <div class="tech-list">
+                                <div class="tech-item-mini">Next.js</div>
+                                <div class="tech-item-mini">React</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-group scale-in">
+                            <div class="group-header">
+                                <span class="group-no">03</span>
+                                <span class="group-label">后端与数据</span>
+                            </div>
+                            <div class="tech-list">
+                                <div class="tech-item-mini">Node.js</div>
+                                <div class="tech-item-mini">Supabase</div>
+                                <div class="tech-item-mini">Resend</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-group scale-in">
+                            <div class="group-header">
+                                <span class="group-no">04</span>
+                                <span class="group-label">运维与托管</span>
+                            </div>
+                            <div class="tech-list">
+                                <div class="tech-item-mini">GitHub</div>
+                                <div class="tech-item-mini">Vercel</div>
+                                <div class="tech-item-mini">Cloudflare</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="about-section">
+                <div class="about-grid">
+                    <div class="about-left fade-left">
+                        <h2>关于我们<br><span style="font-size: 0.6em; color: #8b8b8b;">天枢互联 · Dubhe Nexus</span></h2>
+                        <hr>
+                    </div>
+                    <div class="about-right fade-right">
+                        <p>天枢互联 Dubhe Nexus 是一个专注于模拟飞行领域的独立开发团队。我们最初从大型社区平台起步，现已转型为以「轻量工具 + 数据服务」为核心的敏捷开发模式。</p>
+                        <p>我们的核心业务包括：<strong style="font-weight: 500;">航空数据 API</strong>（提供专业且易用的公开数据接口）、
+                            <strong style="font-weight: 500;">社区运营系统</strong>以及多项
+                            <strong style="font-weight: 500;">实用工具</strong>。我们不是在做产品堆砌，而是在寻找解决行业痛点的最优路径。
+                        </p>
+                        <p>团队信奉「简约、高效、实用」的价值观。我们的策略非常明确：快速构建、低成本维护、反馈驱动，避免在项目早期引入不必要的复杂性。</p>
+                        <p class="note">当前重点：数据接口优化 · 提升系统稳定性 · 核心工具维护</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="info-section">
+                <div class="info-block fade-left">
+                    <h3>敏捷开发空间</h3>
+                    <p>天枢互联不追求商业规模，我们更看重技术的灵活性与实际应用。项目的推进方式偏向轻量化，旨在通过快速迭代满足模拟飞行爱好者与开发者的真实需求。</p>
+                </div>
+                <div class="info-block fade-right">
+                    <h3>服务保障</h3>
+                    <p>虽然项目处于成长期，部分接口和功能可能会根据技术架构进行优化调整，但我们会尽力保障核心服务的稳定性。欢迎广大用户提供建议与反馈。</p>
+                    <div class="info-tags">
+                        <span>持续迭代</span>
+                        <span>效率优先</span>
+                        <span>技术开放</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="contact" class="footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">天枢互联创研工作室<br>Dubhe Nexus Innovation and Research Studio</div>
+                    <p>独立开发团队 · 模拟飞行与轻量化技术探索</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系我们</h4>
+                    <a href="mailto:info@dubhenexus.org">info@dubhenexus.org</a>
+                    <a href="mailto:support@dubhenexus.org">support@dubhenexus.org</a>
+                    <div class="footer-nav">
+                        <a href="#projects">项目</a>
+                        <a href="#philosophy">理念</a>
+                        <a href="#about">关于我们</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div style="flex: 1; text-align: left;">
+                    &copy; 2026 Dubhe Nexus Innovation and Research Studio
+                    <div style="margin-top: 5px;">
+                        Licensed under <a href="/en/license.html" style="color: #444; font-weight: 500;">MIT / CC BY-SA 4.0</a>
+                    </div>
+                </div>
+                <div style="flex: 1; text-align: right;">
+                    <span style="display: block; letter-spacing: 0.1em; color: #888;">创新 · 构建 · 迭代 · 因势而变</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="effect.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

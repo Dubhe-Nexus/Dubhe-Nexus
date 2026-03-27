@@ -1,0 +1,709 @@
+<!-- © 2026 Dubhe Nexus Innovation and Research Studio -->
+<!-- Licensed under MIT License -->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>开源许可 | 天枢互联 Dubhe Nexus</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #111111;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-weight: 300;
+            line-height: 1.4;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f0f0f0;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #aaa;
+        }
+
+        /* 导航栏 */
+        .glass-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            z-index: 100;
+            padding: 1.25rem 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .glass-nav.scrolled {
+            background: #ffffff;
+            padding: 0.875rem 2rem;
+            border-bottom-color: rgba(0, 0, 0, 0.08);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+        }
+
+        @media (max-width: 768px) {
+            .glass-nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .glass-nav.scrolled {
+                padding: 0.75rem 1.5rem;
+            }
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            letter-spacing: 0.3em;
+            font-weight: 400;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            opacity: 0.8;
+            letter-spacing: 0.32em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+            text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background: #000;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1.2rem;
+            }
+
+            .nav-links a {
+                font-size: 10px;
+                letter-spacing: 0.2em;
+            }
+        }
+
+        /* 主容器 */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+
+        /* 英雄区 */
+        .licenses-hero {
+            position: relative;
+            min-height: 45vh;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #efefef;
+            background: linear-gradient(165deg, #fafafa 0%, #ffffff 100%);
+        }
+
+        .hero-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 7rem 2rem 4rem;
+            width: 100%;
+            animation: fadeInUp 0.9s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-eyebrow {
+            font-size: 13px;
+            letter-spacing: 0.4em;
+            color: #9b9b9b;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 400;
+            animation: slideInLeft 0.7s ease-out;
+        }
+
+        .hero-title {
+            font-size: clamp(2.4rem, 7vw, 4.5rem);
+            font-weight: 300;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: #111;
+            animation: fadeInUp 0.7s ease-out 0.05s both;
+        }
+
+        .hero-desc {
+            max-width: 42rem;
+            margin-top: 1.8rem;
+            animation: fadeInUp 0.7s ease-out 0.1s both;
+        }
+
+        .hero-desc p {
+            font-size: 1rem;
+            color: rgba(0, 0, 0, 0.65);
+            line-height: 1.5;
+            font-weight: 300;
+            border-left: 2px solid #cfcfcf;
+            padding-left: 1.25rem;
+        }
+
+        /* 通用动画 */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+
+        .fade-up.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 许可证区块 */
+        .licenses-section {
+            padding: 5rem 0;
+        }
+
+        .license-card {
+            background: #ffffff;
+            border: 1px solid #ededed;
+            border-radius: 1.25rem;
+            padding: 2rem 2rem 2.2rem;
+            margin-bottom: 2.8rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .license-card:hover {
+            border-color: #d4d4d4;
+            box-shadow: 0 12px 28px -12px rgba(0, 0, 0, 0.08);
+            transform: translateY(-3px);
+        }
+
+        .license-header {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 1rem;
+        }
+
+        .license-name {
+            font-size: 1.6rem;
+            font-weight: 380;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #1e1e1e, #3b3b3b);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .license-badge {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            background: #f6f6f6;
+            padding: 0.25rem 0.9rem;
+            border-radius: 30px;
+            color: #5a5a5a;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .license-content {
+            font-family: 'Inter', monospace;
+            font-size: 0.85rem;
+            line-height: 1.65;
+            color: #2d2d2d;
+            background: #fefefe;
+            padding: 0.5rem 0;
+        }
+
+        .license-content p {
+            margin-bottom: 1rem;
+            font-weight: 320;
+        }
+
+        .license-content pre {
+            background: #f8f8f8;
+            padding: 1.2rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            font-size: 0.75rem;
+            font-family: 'SF Mono', 'Menlo', monospace;
+            border: 1px solid #ececec;
+            margin: 1rem 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #2c2c2c;
+        }
+
+        .license-note {
+            margin-top: 1rem;
+            font-size: 0.75rem;
+            color: #8b8b8b;
+            border-top: 1px dashed #ececec;
+            padding-top: 1rem;
+        }
+
+        .important-notice {
+            background: #fbfbfb;
+            border-left: 4px solid #a0a0a0;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0 2.5rem;
+            border-radius: 1rem;
+        }
+
+        .important-notice h4 {
+            font-weight: 450;
+            font-size: 0.9rem;
+            letter-spacing: -0.2px;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            color: #3a3a3a;
+        }
+
+        .important-notice p {
+            font-size: 0.85rem;
+            color: #5f5f5f;
+            line-height: 1.5;
+        }
+
+        .divider-light {
+            height: 1px;
+            background: #efefef;
+            margin: 2rem 0;
+        }
+
+        /* 页脚 */
+        .footer {
+            background: #fff;
+            border-top: 1px solid #efefef;
+            padding: 4rem 2rem 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .footer-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .footer-brand .footer-logo {
+            font-size: 0.875rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-brand p {
+            font-size: 0.75rem;
+            color: #777;
+            max-width: 280px;
+            line-height: 1.5;
+        }
+
+        .footer-contact {
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .footer-contact {
+                text-align: left;
+            }
+        }
+
+        .footer-contact h4 {
+            font-size: 10px;
+            letter-spacing: 0.3em;
+            color: #aaa;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .footer-contact a {
+            display: block;
+            font-size: 0.875rem;
+            color: #3a3a3a;
+            text-decoration: none;
+            margin-bottom: 0.6rem;
+            transition: all 0.3s;
+        }
+
+        .footer-contact a:hover {
+            color: #000;
+            transform: translateX(-4px);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            justify-content: flex-end;
+        }
+
+        @media (max-width: 768px) {
+            .footer-nav {
+                justify-content: flex-start;
+            }
+        }
+
+        .footer-nav a {
+            font-size: 11px;
+            color: #888;
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .footer-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #000;
+            transition: width 0.3s;
+        }
+
+        .footer-nav a:hover::after {
+            width: 100%;
+        }
+
+        .footer-nav a:hover {
+            color: #000;
+        }
+
+        .footer-copyright {
+            max-width: 1280px;
+            margin: 2.5rem auto 0;
+            padding-top: 1.8rem;
+            border-top: 1px solid #ececec;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 10px;
+            color: #aaa;
+        }
+
+        @media (max-width: 768px) {
+            .footer-copyright {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.75rem;
+            color: #5a5a5a;
+            text-decoration: none;
+            transition: all 0.2s;
+            margin-bottom: 1rem;
+        }
+
+        .back-link:hover {
+            color: #000;
+            gap: 0.6rem;
+        }
+
+        @media (max-width: 768px) {
+            .licenses-section {
+                padding: 3rem 0;
+            }
+
+            .license-card {
+                padding: 1.5rem;
+            }
+
+            .license-name {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="glass-nav" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">天枢互联 Dubhe Nexus</a>
+        </div>
+    </nav>
+
+    <section class="licenses-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">开源许可协议</h1>
+            <div class="hero-desc">
+                <p>本许可条款仅适用于<strong>明确标注</strong>遵循相关许可协议的文件和页面。</p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <!-- 重要提示 -->
+            <div class="important-notice fade-up">
+                <h4>重要声明</h4>
+                <p>本页面包含开源内容与私有财产。以下许可条款仅适用于指定的特定内容。<br>
+                    所有未明确标注许可协议的页面或文档均属于 Dubhe Nexus Innovation and Research
+                    Studio（天枢纽带创新研究室）的专属财产。未经书面许可，不得擅自使用任何未获授权的材料。<br>
+                    所有链接的外部第三方资源均受其各自许可协议的约束。</p>
+            </div>
+
+            <div class="licenses-section">
+                <!-- MIT License -->
+                <div class="license-card fade-up">
+                    <div class="license-header">
+                        <span class="license-name">软件代码许可</span>
+                        <span class="license-badge">MIT 许可协议</span>
+                    </div>
+                    <div class="license-content">
+                        <p><strong>&copy; 2026 Dubhe Nexus Innovation and Research Studio</strong></p>
+                        <p>特此授予任何人免费获得本软件和相关文档文件（“软件”）副本的许可，不受限制地处理本软件，包括但不限于使用、复制、修改、合并 、发布、分发、再许可的权利， 被许可人有权利使用、复制、修改、合并、出版发行、散布、再许可和/或贩售软件及软件的副本，及授予被供应人同等权利，惟服从以下义务：</p>
+                        <p>在软件和软件的所有副本中都必须包含以上著作权声明和本许可声明。</p>
+                        <p>本软件“按原样”提供，不提供任何形式的明示或暗示的保证，包括但不限于适销性、特定用途适用性和不侵权保证。在任何情况下，作者或版权所有者均不对任何索赔、损害或其他责任承担责任，无论是在合同诉讼、侵权诉讼还是其他诉讼中，也无论是因软件本身或使用软件或与软件相关的其他交易而引起的。</p>
+                    </div>
+                    <div class="license-note">
+                        仅适用于明确标注遵循 MIT 许可协议的页面或文件。
+                    </div>
+                </div>
+
+                <!-- CC BY-SA 4.0 -->
+               <div class="license-card fade-up">
+                    <div class="license-header">
+                        <span class="license-name">文档与创意内容许可</span>
+                        <span class="license-badge">CC BY-SA 4.0</span>
+                    </div>
+                    <div class="license-content">
+                        <p>本项目的文档及创意内容采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" style="color: #444; font-weight: 500;" target="_blank"><strong> 知识共享署名-相同方式共享 4.0 国际许可协议 (CC BY-SA 4.0)</strong></a> 进行许可。</p>
+                        <p>您可以自由地：</p>
+                        <p> <strong>共享</strong> — 在任何媒介以任何形式复制、发行本作品 在任何用途下，甚至商业目的。<br>
+                            <strong>演绎</strong> — 修改、转换或以本作品为基础进行创作 在任何用途下，甚至商业目的。
+                        </p>
+                        <p>惟须遵守下列条件：</p>
+                        <p> <strong>署名</strong> — 必须给出适当的署名，提供指向本许可协议的链接，同时标明是否（对原始作品）作了修改。您可以用任何合理的方式来署名，但是不得以任何方式暗示许可人为您或您的使用背书。<br>
+                            <strong>相同方式共享</strong> — 相同方式共享 — 如果您再混合、转换或者基于本作品进行创作，您必须基于与原先许可协议相同的许可协议 分发您贡献的作品。<br>
+                            <strong>不得附加限制</strong> — 没有附加限制 — 您不得适用法律术语或者 技术措施 从而限制其他人做许可协议允许的事情。
+                        </p>
+                    </div>
+                    <div class="license-note">
+                        仅适用于明确标注遵循 CC BY-SA 4.0 许可协议的页面或文件。
+                    </div>
+                </div>
+
+                <!-- Proprietary Rights 卡片 -->
+                <div class="license-card fade-up">
+                    <div class="license-header">
+                        <span class="license-name">Proprietary Rights</span>
+                        <span class="license-badge">All Rights Reserved</span>
+                    </div>
+                    <div class="license-content">
+                        <p>All other parts of this project, including but not limited to:</p>
+                        <p>• Core backend logic and private configuration files<br>
+                            • Pages without explicit open-source license footers or headers<br>
+                            • Proprietary algorithms, database schemas, and internal tooling<br>
+                            • Trademarks, logos, and distinctive branding elements</p>
+                        <p>are <strong>Proprietary</strong> and remain the exclusive property of <strong>Dubhe Nexus
+                                Innovation and Research Studio</strong>.</p>
+                        <p>© 2026 Dubhe Nexus Innovation and Research Studio. All Rights Reserved.</p>
+                        <p>No part of these proprietary materials may be reproduced, distributed, or transmitted in any
+                            form without prior written permission from the copyright holder, except as permitted by
+                            applicable law.</p>
+                    </div>
+                    <div class="license-note">
+                        🔒 未经明确授权，不得复制、反编译或用于商业用途。
+                    </div>
+                </div>
+
+                <div class="divider-light"></div>
+                <div class="fade-up" style="margin: 2rem 0 3rem; text-align: center;">
+                    <a href="index.html" class="back-link">← 返回主页</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">天枢互联创研工作室<br>Dubhe Nexus Innovation and Research Studio</div>
+                    <p>独立开发团队 · 模拟飞行与轻量化技术探索</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系我们</h4>
+                    <a href="mailto:info@dubhenexus.org">info@dubhenexus.org</a>
+                    <a href="mailto:support@dubhenexus.org">support@dubhenexus.org</a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div style="flex: 1; text-align: left;">
+                    &copy; 2026 Dubhe Nexus Innovation and Research Studio
+                    <div style="margin-top: 5px;">
+                        Licensed under <a href="/en/license.html" style="color: #444; font-weight: 500;">MIT / CC BY-SA 4.0</a>
+                    </div>
+                </div>
+                <div style="flex: 1; text-align: right;">
+                    <span style="display: block; letter-spacing: 0.1em; color: #888;">创新 · 构建 · 迭代 · 因势而变</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 滚动导航效果
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer 实现滚动动画
+        const animatedElements = document.querySelectorAll('.fade-up');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -20px 0px" });
+
+        animatedElements.forEach(el => observer.observe(el));
+
+        // 预先检查已经可见的元素
+        animatedElements.forEach(el => {
+            if (el.getBoundingClientRect().top < window.innerHeight - 80) {
+                el.classList.add('revealed');
+            }
+        });
+
+        // 平滑滚动 (内部锚点如果存在)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === "#" || href === "") return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
