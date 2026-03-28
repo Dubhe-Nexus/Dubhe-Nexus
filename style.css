@@ -1,4 +1,4 @@
-/* © 2026 Dubhe Nexus Innovation and Research Studio */
+/* Copyright (c) 2026 Dubhe Nexus Innovation and Research Studio */
 /* Licensed under MIT License */
 
 * {
@@ -68,7 +68,40 @@ body {
     align-items: center;
 }
 
+.fa, .fab, .fas, .far, .bx {
+    font-size: 0.85em;
+    vertical-align: middle;
+}
+
+.lucide {
+    width: 13px;
+    height: 13px;
+    stroke-width: 2.5;
+    vertical-align: middle;
+}
+
+.nav-links i, .nav-links svg {
+    margin-right: 6px;
+    opacity: 0.8;
+}
+
+h3 i, h3 svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    opacity: 0.9;
+}
+
+.project-title i, .project-title svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     font-size: 1.1rem;
     letter-spacing: 0.3em;
     font-weight: 400;
@@ -78,6 +111,14 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     transition: all 0.3s;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
 }
 
 .logo:hover {
@@ -564,6 +605,17 @@ body {
     transition: all 0.25s ease;
     cursor: default;
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tech-item-mini i, 
+.tech-item-mini svg {
+    font-size: 0.8rem;
+    width: 14px;
+    height: 14px;
+    opacity: 0.7;
 }
 
 .tech-item-mini::after {

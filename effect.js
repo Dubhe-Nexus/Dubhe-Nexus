@@ -1,4 +1,4 @@
-// © 2026 Dubhe Nexus Innovation and Research Studio
+// Copyright (c) 2026 Dubhe Nexus Innovation and Research Studio
 // Licensed under MIT License
 
 // 滚动效果

@@ -1,0 +1,38 @@
+# Copyright (c) 2026 Dubhe Nexus Innovation and Research Studio
+# Licensed under MIT License
+
+# SEO
+/home.html          /                    301
+/license.html       /license             301
+/error/401.html     /error/401           301
+/error/402.html     /error/402           301
+/error/403.html     /error/403           301
+/error/404.html     /error/404           301
+/error/410.html     /error/410           301
+/error/418.html     /error/418           301
+/error/420.html     /error/420           301
+/error/451.html     /error/451           301
+/error/530.html     /error/530           301
+/error/701.html     /error/701           301
+/error/702.html     /error/702           301
+/error/724.html     /error/724           301
+/error/731.html     /error/731           301
+
+# Rewrite
+/                   /home.html           200
+/license            /license.html        200
+
+# Error
+/error/401          /error/401.html      401
+/error/402          /error/402.html      402
+/error/403          /error/403.html      403
+/error/410          /error/410.html      410
+/error/418          /error/418.html      418
+/error/420          /error/420.html      420
+/error/451          /error/451.html      451
+/error/530          /error/530.html      530
+/error/701          /error/701.html      701
+/error/702          /error/702.html      702
+/error/724          /error/724.html      724
+/error/731          /error/731.html      731
+/*                  /error/404.html      404
