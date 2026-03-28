@@ -2,15 +2,15 @@
 # Licensed under MIT License
 
 # Error
-/error/401          /error/401.html      401
-/error/402          /error/402.html      402
-/error/403          /error/403.html      403
-/error/410          /error/410.html      410
-/error/418          /error/418.html      418
-/error/420          /error/420.html      420
-/error/451          /error/451.html      451
-/error/530          /error/530.html      530
-/error/701          /error/701.html      701
-/error/702          /error/702.html      702
-/error/724          /error/724.html      724
-/error/731          /error/731.html      731
+/401        /error/401.html    401
+/402        /error/402.html    402
+/403        /error/403.html    403
+/410        /error/410.html    410
+/418        /error/418.html    418
+/420        /error/420.html    420
+/451        /error/451.html    451
+/530        /error/530.html    530
+/701        /error/701.html    701
+/702        /error/702.html    702
+/724        /error/724.html    724
+/731        /error/731.html    731
