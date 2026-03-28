@@ -1,14 +1,11 @@
 # Copyright (c) 2026 Dubhe Nexus Innovation and Research Studio
 # Licensed under MIT License
 
-# Rewrite
-/                   /home.html           200
-/en                 /en/home.html        200
-
 # Error
 /error/401          /error/401.html      401
 /error/402          /error/402.html      402
 /error/403          /error/403.html      403
+/*                  /error/404.html      404
 /error/410          /error/410.html      410
 /error/418          /error/418.html      418
 /error/420          /error/420.html      420
@@ -18,4 +15,3 @@
 /error/702          /error/702.html      702
 /error/724          /error/724.html      724
 /error/731          /error/731.html      731
-/*                  /error/404.html      404
