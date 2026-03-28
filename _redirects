@@ -2,8 +2,8 @@
 # Licensed under MIT License
 
 # Rewrite
-/home.html          /                    200
-/en/home.html       /en                  200
+/                   /home.html           200
+/en                 /en/home.html        200
 
 # Error
 /error/401          /error/401.html      401
