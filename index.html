@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>天枢互联 | Dubhe Nexus</title>
-    <link rel="icon" type="image/jpeg" href="images/Dubhe Nexus Web.jpg">
+    <link rel="icon" type="image/jpeg" href="images/Dubhe Nexus 1.1.jpg">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap"
         rel="stylesheet">
@@ -114,6 +114,13 @@
                         <div class="project-desc">虚拟香港机场管理局 VAAHK 官网</div>
                         <div class="project-link">访问 →</div>
                     </a>
+                    <a href="https://wag.dubhenexus.org" target="_blank" rel="noopener noreferrer"
+                        class="project-card scale-in">
+                        <div class="project-badge">社区平台</div>
+                        <div class="project-title"></i>挽苑航空集团 WAG</div>
+                        <div class="project-desc">挽苑航空集团 WAG 官网</div>
+                        <div class="project-link">访问 →</div>
+                    </a>
                 </div>
             </section>
 
@@ -200,31 +207,79 @@
                     </div>
 
                     <div class="dev-grid">
+                        <!-- 托管方案 -->
                         <div class="card scale-in">
-                            <h3><i class="fa-regular fa-cloud"></i> 托管 <span class="price-tag">推荐 / 经济型</span></h3>
-                            <p style="font-size: 0.85rem; color: #888;">适用人群：追求省心、无代码基础的虚航</p>
-                            <ul>
-                                <li>页面 UI 设计 + 代码实现</li>
-                                <li>Cloudflare Pages 部署</li>
-                                <li>域名解析 + SSL 证书配置</li>
-                                <li>免费分配 *.dubhenexus.org 二级域名</li>
-                                <li>或自备顶级域名（自行购买）</li>
-                            </ul>
-                            <div class="advantage">优势：价格低廉，无需维护</div>
-                            <p style="font-size: 0.75rem; color: #aaa; margin-top: 1rem;">约束：页脚需保留署名及链接；源代码权属归本工作室。</p>
+                            <div class="card-header">
+                                <div class="card-icon"><i class="fa-regular fa-cloud"></i></div>
+                                <div class="card-title-group">
+                                    <h3>托管 (仅使用权)</h3>
+                                    <span class="price-tag">经济型</span>
+                                </div>
+                            </div>
+                            <div class="price-table">
+                                <div class="price-row">
+                                    <span class="label">单页面 (模板)</span>
+                                    <span class="value">¥9.9 <small>/年</small></span>
+                                </div>
+                                <div class="price-row">
+                                    <span class="label">单页面 (定制)</span>
+                                    <span class="value">¥14.9 <small>/年</small></span>
+                                </div>
+                                <div class="price-row highlight">
+                                    <span class="label">多页面</span>
+                                    <span class="value">¥19.9 <small>起/年</small></span>
+                                </div>
+                            </div>
+                            <div class="card-footer-info">
+                                <span>包含：UI设计、代码实现、CF部署、SSL证书</span>
+                                <p>备注：页脚需保留署名；源码权属归工作室。</p>
+                            </div>
                         </div>
 
+                        <!-- 买断方案 -->
                         <div class="card scale-in">
-                            <h3><i class="fa-solid fa-code"></i> 源代码买断 <span class="price-tag">专业型</span></h3>
-                            <p style="font-size: 0.85rem; color: #888;">适用人群：拥有独立服务器，希望完全掌控代码的团队</p>
-                            <ul>
-                                <li>交付纯净的 HTML/CSS/JS 静态项目包</li>
-                                <li>可自行进行二次开发</li>
-                                <li>无需在页脚保留强制署名</li>
-                            </ul>
-                            <div class="advantage">优势：一次性付费，高度自主</div>
-                            <p style="font-size: 0.75rem; color: #aaa; margin-top: 1rem;">约束：交付即完成，后续自行修改导致的问题不予修复。
-                            </p>
+                            <div class="card-header">
+                                <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                                <div class="card-title-group">
+                                    <h3>源代码买断</h3>
+                                    <span class="price-tag">专业型</span>
+                                </div>
+                            </div>
+                            <div class="price-table">
+                                <div class="price-row">
+                                    <span class="label">单页面 (模板)</span>
+                                    <span class="value">¥14.9</span>
+                                </div>
+                                <div class="price-row">
+                                    <span class="label">单页面 (定制)</span>
+                                    <span class="value">¥19.9</span>
+                                </div>
+                                <div class="price-row highlight">
+                                    <span class="label">多页面</span>
+                                    <span class="value">¥24.9 <small>起</small></span>
+                                </div>
+                            </div>
+                            <div class="card-footer-info">
+                                <span>包含：纯净静态项目包、支持二次开发、无强制署名</span>
+                                <p>可选：买断后的托管服务 ¥10/年</p>
+                            </div>
+                        </div>
+
+                        <!-- 域名服务 -->
+                        <div class="card scale-in domain-card" style="grid-column: span 2;">
+                            <div class="domain-content">
+                                <div class="domain-item">
+                                    <i data-lucide="globe" class="mini-icon"></i>
+                                    <span class="label">*.dubhenexus.org 子域名</span>
+                                    <span class="price">¥5 /年</span>
+                                </div>
+                                <div class="domain-divider"></div>
+                                <div class="domain-item">
+                                    <i data-lucide="link" class="mini-icon"></i>
+                                    <span class="label">自备顶级域名</span>
+                                    <span class="price free">免费</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -306,8 +361,8 @@
                 </div>
                 <div class="footer-contact">
                     <h4>联系我们</h4>
-                    <a href="/cdn-cgi/l/email-protection#95fcfbf3fad5f1e0f7fdf0fbf0ede0e6bbfae7f2"><span class="__cf_email__" data-cfemail="aec7c0c8c1eecadbccc6cbc0cbd6dbdd80c1dcc9">[email&#160;protected]</span></a>
-                    <a href="/cdn-cgi/l/email-protection#81f2f4f1f1eef3f5c1e5f4e3e9e4efe4f9f4f2afeef3e6"><span class="__cf_email__" data-cfemail="ec9f999c9c839e98ac88998e8489828994999fc2839e8b">[email&#160;protected]</span></a>
+                    <a href="mailto:info@dubhenexus.org">info@dubhenexus.org</a>
+                    <a href="mailto:support@dubhenexus.org">support@dubhenexus.org</a>
                     <div class="footer-nav">
                         <a href="#projects">项目</a>
                         <a href="#development">建站服务</a>
