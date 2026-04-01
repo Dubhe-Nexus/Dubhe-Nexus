@@ -780,7 +780,7 @@ h3 i, h3 svg {
 /* 建站服务 */
 .dev-section {
     padding: 8rem 0;
-    background: #ffffff;
+    background: #fafafa;
     border-top: 1px solid #efefef;
 }
 
@@ -800,17 +800,16 @@ h3 i, h3 svg {
 
 .card {
     background: #fff;
-    border: 1px solid #f0f0f0;
+    border: 1px solid #eaeaea;
     border-radius: 1.5rem;
     padding: 2.5rem;
     transition: all 0.4s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
 .card:hover {
     border-color: #111;
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
 }
 
 .card h3 {
@@ -879,153 +878,6 @@ h3 i, h3 svg {
     font-size: 0.9rem;
     color: #666;
     line-height: 1.7;
-}
-
-/* 价格卡片细节优化 */
-.card {
-    display: flex;
-    flex-direction: column;
-}
-
-.card-header {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    margin-bottom: 2rem;
-}
-
-.card-icon {
-    width: 48px;
-    height: 48px;
-    background: #f8f8f8;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.25rem;
-    color: #111;
-}
-
-.card-title-group h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.25rem;
-    font-weight: 500;
-}
-
-.price-table {
-    flex-grow: 1;
-    margin-bottom: 2rem;
-}
-
-.price-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 0.875rem 0;
-    border-bottom: 1px solid #f5f5f5;
-}
-
-.price-row .label {
-    font-size: 0.95rem;
-    color: #555;
-}
-
-.price-row .value {
-    font-size: 1.15rem;
-    font-weight: 500;
-    color: #111;
-}
-
-.price-row .value small {
-    font-size: 0.75rem;
-    color: #888;
-    font-weight: 300;
-}
-
-.price-row.highlight {
-    border-bottom-color: #eee;
-}
-
-.price-row.highlight .value {
-    color: #000;
-}
-
-.card-footer-info {
-    padding-top: 1.5rem;
-    border-top: 1px dashed #eee;
-}
-
-.card-footer-info span {
-    display: block;
-    font-size: 0.85rem;
-    color: #333;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-}
-
-.card-footer-info p {
-    font-size: 0.75rem;
-    color: #999;
-}
-
-/* 域名卡片专项 */
-.domain-card {
-    padding: 1.5rem 2.5rem !important;
-}
-
-.domain-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.domain-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex: 1;
-}
-
-.domain-divider {
-    width: 1px;
-    height: 30px;
-    background: #eee;
-    margin: 0 3rem;
-}
-
-.domain-item .label {
-    font-size: 0.9rem;
-    color: #444;
-}
-
-.domain-item .price {
-    margin-left: auto;
-    font-weight: 500;
-    color: #111;
-}
-
-.domain-item .price.free {
-    color: #22c55e;
-}
-
-.mini-icon {
-    width: 18px;
-    height: 18px;
-    color: #888;
-}
-
-@media (max-width: 768px) {
-    .domain-content {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
-    }
-    .domain-divider {
-        display: none;
-    }
-    .domain-item .price {
-        margin-left: auto;
-    }
 }
 
 /* 页脚调整 */

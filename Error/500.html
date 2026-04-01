@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 Internal Server Error</title>
+    <style>
+        :root {
+            --accent: #000;
+            --gray: #86868b;
+            --border: #e5e5e5;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            background-color: #ffffff;
+            color: var(--accent);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 12%;
+            position: relative;
+        }
+
+        .bg-text {
+            position: absolute;
+            font-size: 30vw;
+            font-weight: 900;
+            color: #f5f5f7;
+            z-index: -1;
+            right: 5vw;
+            bottom: -5vh;
+            user-select: none;
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: -2px;
+        }
+
+        .description {
+            font-size: 20px;
+            color: var(--gray);
+            max-width: 1000px;
+            margin: 24px 0;
+            line-height: 1.6;
+        }
+
+        .status-block {
+            display: inline-block;
+            background: #f5f5f7;
+            padding: 10px 16px;
+            border-left: 3px solid #000;
+            font-family: "SFMono-Regular", Consolas, monospace;
+            font-size: 14px;
+            margin: 20px 0;
+            width: fit-content;
+        }
+
+        .status-block span {
+            color: #d63031;
+            font-weight: 600;
+        }
+
+        footer {
+            padding: 60px 12%;
+            font-size: 12px;
+            color: var(--gray);
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            border-top: 1px solid var(--border);
+            line-height: 1.8;
+        }
+
+        .contact {
+            text-align: right;
+        }
+
+        .contact a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .main {
+                padding: 0 8%;
+            }
+
+            footer {
+                padding: 40px 8%;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="bg-text">500</div>
+        <h1>服务器内部错误</h1>
+        <p class="description">
+            服务器在处理您的请求时遇到了意外情况
+        </p>
+
+        <div class="status-block">
+            STATUS_CODE: <span>HTTP 500 INTERNAL SERVER ERROR</span>
+        </div>
+    </div>
+
+    <footer>
+        <div class="copyright">
+            © 2026 Virtual Airport Authority Hong Kong, VAAHK<br>
+            © 2026 Dubhe Nexus Aviation Interconnection Network
+        </div>
+        <div class="contact">
+            Support<br>
+            <a href="mailto:support@dubhe-nexus.virtual-vaahk.org">support@dubhe-nexus.virtual-vaahk.org</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

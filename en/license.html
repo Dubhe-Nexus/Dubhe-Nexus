@@ -1,4 +1,4 @@
-<!-- Copyright (c) 2026 Dubhe Nexus Innovation and Research Studio -->
+<!-- © 2026 Dubhe Nexus Innovation and Research Studio -->
 <!-- Licensed under MIT License -->
 
 <!DOCTYPE html>
@@ -12,10 +12,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="style.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
+        /* 许可证页面专属样式 */
+        /* 英雄区 */
         .licenses-hero {
             position: relative;
             min-height: 45vh;
@@ -67,14 +68,6 @@
             animation: slideInLeft 0.7s ease-out;
         }
 
-        .hero-tag {
-            font-size: 14px;
-            letter-spacing: 0.4em;
-            color: #9b9b9b;
-            text-transform: uppercase;
-            margin-bottom: 0.75rem;
-        }
-
         .hero-title {
             font-size: clamp(2.4rem, 7vw, 4.5rem);
             font-weight: 300;
@@ -99,7 +92,7 @@
             padding-left: 1.25rem;
         }
 
-        /* 动画 */
+        /* 通用动画 */
         .fade-up {
             opacity: 0;
             transform: translateY(32px);
@@ -111,7 +104,7 @@
             transform: translateY(0);
         }
 
-        /* 许可协议 */
+        /* 许可证区块 */
         .licenses-section {
             padding: 5rem 0;
         }
@@ -401,20 +394,23 @@
 
     <nav class="glass-nav" id="navbar">
         <div class="nav-container">
-            <a href="/" class="logo">
-                <img src="images/Dubhe Nexus Web.jpg" alt="Logo">
+            <a href="home.html" class="logo">
+                <img src="../images/Dubhe Nexus Web.jpg" alt="Logo">
+                Dubhe Nexus
             </a>
+            <div class="nav-links">
+                <a href="home.html"><i data-lucide="home" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>Home</a>
+                <a href="../license.html" class="lang-switch"><i data-lucide="languages" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>中文</a>
+            </div>
         </div>
     </nav>
 
     <section class="licenses-hero">
         <div class="hero-content">
-            <div class="hero-tag">开源许可协议</div>
             <h1 class="hero-title">Open Source Licenses</h1>
             <div class="hero-desc">
-                <p>This licenses applies <strong>ONLY</strong> to documents and pages for which a specific licenses
+                <p>This license applies <strong>ONLY</strong> to documents and pages for which a specific license
                     agreement is explicitly stated.</p>
-                <p>本许可仅适用于明确规定了特定许可协议的文档和页面。</p>
             </div>
         </div>
     </section>
@@ -423,23 +419,20 @@
         <div class="container">
             <!-- 重要提示 -->
             <div class="important-notice fade-up">
-                <h4>Important Notice / 重要通知</h4>
+                <h4>Important Notice</h4>
                 <p>This page contains both open-source and proprietary material. The following license applies only to
                     the specified content.<br>
                     All other pages or documents not explicitly licensed remain the exclusive property of Dubhe Nexus
                     Innovation and Research Studio. No license is granted for any use of unlicensed materials without
                     prior written permission.<br>
-                    All linked external third-party resources are subject to their respective license agreements.</p>
-                <p>本页面包含开源和专有内容。以下许可仅适用于指定内容。<br>
-                    所有其他未明确许可的页面或文档仍为 天枢互联创研工作室 的专属财产。未经事先书面许可，不得使用任何未经许可的材料。<br>
-                    所有链接的外部第三方资源均受其各自许可协议约束。</p>
+                    All linked external third-party resources aresubject to their respective license agreements.</p>
             </div>
 
             <div class="licenses-section">
                 <!-- MIT License -->
                 <div class="license-card fade-up">
                     <div class="license-header">
-                        <span class="license-name">Software License / 软件许可协议</span>
+                        <span class="license-name">Software License</span>
                         <span class="license-badge">MIT License</span>
                     </div>
                     <div class="license-content">
@@ -466,7 +459,7 @@
                 <!-- CC BY-SA 4.0 -->
                 <div class="license-card fade-up">
                     <div class="license-header">
-                        <span class="license-name">Documentation & Creative Content / 文档与创意内容</span>
+                        <span class="license-name">Documentation & Creative Content</span>
                         <span class="license-badge">CC BY-SA 4.0</span>
                     </div>
                     <div class="license-content">
@@ -498,14 +491,14 @@
                 <!-- Proprietary -->
                 <div class="license-card fade-up">
                     <div class="license-header">
-                        <span class="license-name">Proprietary Rights / 专有权利</span>
+                        <span class="license-name">Proprietary Rights</span>
                         <span class="license-badge">All Rights Reserved</span>
                     </div>
                     <div class="license-content">
                         <p>All other parts of this project, including but not limited to:</p>
                         <p>
                             <li>Core backend logic and private configuration files</li>
-                            <li>The page or document does not explicitly state any license agreement.</li>
+                            <li>Pages without explicit open-source license footers or headers</li>
                             <li>Proprietary algorithms, database schemas, and internal tooling</li>
                             <li>Trademarks, logos, and distinctive branding elements</li>
                         </p>
@@ -526,35 +519,32 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="footer-logo" style="display: flex; align-items: center; gap: 10px;">
-                        <img src="images/Dubhe Nexus 1.1.jpg" alt="Logo" style="height: 45px; border-radius: 3px;">
-                        天枢互联创研工作室<br>Dubhe Nexus Innovation and Research Studio
+                        <img src="../images/Dubhe Nexus Web.jpg" alt="Logo" style="height: 24px; border-radius: 3px;">
+                        Dubhe Nexus Innovation and Research Studio
                     </div>
-                    <div class="footer-social" style="margin-top: 12px; display: flex; gap: 15px;">
-                        <a href="https://github.com/Dubhe-Nexus" target="_blank" rel="noopener noreferrer"
-                            style="color: #555; font-size: 18px; transition: color 0.3s;"><i
-                                class="fa-brands fa-github"></i></a>
-                        <a href="https://qm.qq.com/q/w6MtG2lsIM" target="_blank" rel="noopener noreferrer"
-                            style="color: #555; font-size: 18px; transition: color 0.3s;"><i
-                                class="fa-brands fa-qq"></i></a>
-                    </div>
+                    <p>Independent Development Team · Exploring Flight Simulation and Lightweight Technology</p>
                 </div>
                 <div class="footer-contact">
-                    <h4>Contact Us / 联系我们</h4>
-                    <a href="mailto:support@dubhenexus.org">support@dubhenexus.org</a>
+                    <h4>Contact Us</h4>
+                    <a href="mailto:info@dubhenexus.org"><i data-lucide="mail" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 6px;"></i>info@dubhenexus.org</a>
+                    <a href="mailto:support@dubhenexus.org"><i data-lucide="help-circle" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 6px;"></i>support@dubhenexus.org</a>
+                    <div class="footer-nav">
+                        <a href="home.html">Home</a>
+                        <a href="home.html#projects">Projects</a>
+                        <a href="home.html#philosophy">Philosophy</a>
+                        <a href="home.html#about">About Us</a>
+                    </div>
                 </div>
             </div>
             <div class="footer-copyright">
                 <div style="flex: 1; text-align: left;">
                     &copy; 2026 Dubhe Nexus Innovation and Research Studio
                     <div style="margin-top: 5px;">
-                        Licensed under <a href="license.html" style="color: #444; font-weight: 500;">MIT</a>
+                        Licensed under <a href="../license.html" style="color: #444; font-weight: 500;">MIT / CC BY-SA 4.0</a>
                     </div>
                 </div>
-
                 <div style="flex: 1; text-align: right;">
-                    <span style="display: block; letter-spacing: 0.1em; color: #888;">创新 · 构建 · 迭代 · 因势而变</span>
-                    <span style="display: block; letter-spacing: 0.1em; color: #888;">Innovate. Construct. Iterate.
-                        Adapt.</span>
+                    <span style="display: block; letter-spacing: 0.1em; color: #888;">Innovate. Construct. Iterate. Adapt.</span>
                 </div>
             </div>
         </div>
@@ -602,7 +592,8 @@
                 }
             });
         });
-        
+    </script>
+    <script>
         lucide.createIcons();
     </script>
 </body>
