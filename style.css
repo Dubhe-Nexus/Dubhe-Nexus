@@ -780,7 +780,7 @@ h3 i, h3 svg {
 /* 建站服务 */
 .dev-section {
     padding: 8rem 0;
-    background: #fafafa;
+    background: #ffffff;
     border-top: 1px solid #efefef;
 }
 
@@ -858,6 +858,155 @@ h3 i, h3 svg {
     font-size: 0.85rem;
     color: #111;
     font-weight: 500;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    margin-bottom: 1.75rem;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    border: 1px solid #ededed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111;
+    background: #fff;
+    flex: 0 0 auto;
+}
+
+.card-title-group {
+    flex: 1;
+}
+
+.card-title-group h3 {
+    margin: 0;
+}
+
+.price-table {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid #f1f1f1;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #fff;
+}
+
+.price-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.price-row:last-child {
+    border-bottom: 0;
+}
+
+.price-row .label {
+    font-size: 0.9rem;
+    color: #444;
+    font-weight: 400;
+}
+
+.price-row .value {
+    font-size: 1.1rem;
+    color: #111;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.price-row .value small {
+    font-size: 0.75rem;
+    color: #888;
+    font-weight: 400;
+    margin-left: 4px;
+}
+
+.price-row.highlight {
+    background: #fafafa;
+}
+
+.card-footer-info {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px dashed #eee;
+}
+
+.card-footer-info span {
+    display: block;
+    font-size: 0.85rem;
+    color: #111;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.card-footer-info p {
+    margin-top: 0.6rem;
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.domain-card {
+    padding: 0;
+}
+
+.domain-content {
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.domain-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.domain-item .mini-icon {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2.5;
+    color: #666;
+    opacity: 0.9;
+    flex: 0 0 auto;
+}
+
+.domain-item .label {
+    flex: 1;
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 400;
+}
+
+.domain-item .price {
+    font-size: 0.95rem;
+    color: #111;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.domain-item .price.free {
+    color: #666;
+    font-weight: 500;
+}
+
+.domain-divider {
+    height: 1px;
+    width: 100%;
+    background: #f0f0f0;
 }
 
 .service-note {
