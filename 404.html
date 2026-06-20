@@ -273,16 +273,21 @@
             <div class="bg-text">404</div>
 
             <div class="content-box">
-                <h1>页面不存在</h1>
+                <h1>页面不存在 / Page Not Found</h1>
                 <p class="description">
-                    您访问的页面不存在或已被移除<br>
-                    请检查您输入的网址是否正确
+                    您访问的页面不存在或已被移除，请检查您输入的网址是否正确。<br>
+                    The page you requested could not be found. Please check the URL for errors.
                 </p>
 
                 <div class="status-block">
                     <div class="status-code">
                         STATUS_CODE: <span>HTTP 404 NOT FOUND</span>
                     </div>
+                </div>
+
+                <div class="back-home" style="display:flex; gap: 2rem;">
+                    <a href="/">返回首页</a>
+                    <a href="/en/">Go Home</a>
                 </div>
             </div>
         </div>
@@ -292,13 +297,17 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <div class="footer-logo">
-                        天枢互联创研工作室<br>
-                        Dubhe Nexus Innovation and Research Studio
+                    <div class="footer-logo" style="display: flex; align-items: center; gap: 10px;">
+                        <img src="images/Dubhe Nexus 1.1.jpg" alt="Logo" style="height: 45px; border-radius: 3px;">
+                        天枢互联创研工作室<br>Dubhe Nexus Innovation and Research Studio
                     </div>
-                    <div class="footer-social">
-                        <a href="https://github.com/Dubhe-Nexus" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://qm.qq.com/q/w6MtG2lsIM" target="_blank"><i class="fa-brands fa-qq"></i></a>
+                    <div class="footer-social" style="margin-top: 12px; display: flex; gap: 15px;">
+                        <a href="https://github.com/Dubhe-Nexus" target="_blank" rel="noopener noreferrer"
+                            style="color: #555; font-size: 18px; transition: color 0.3s;"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://qm.qq.com/q/w6MtG2lsIM" target="_blank" rel="noopener noreferrer"
+                            style="color: #555; font-size: 18px; transition: color 0.3s;"><i
+                                class="fa-brands fa-qq"></i></a>
                     </div>
                 </div>
                 <div class="footer-contact">
@@ -306,16 +315,16 @@
                     <a href="mailto:support@dubhenexus.org">support@dubhenexus.org</a>
                 </div>
             </div>
-
             <div class="footer-copyright">
-                <div style="text-align: left;">
+                <div style="flex: 1; text-align: left;">
                     &copy; 2026 Dubhe Nexus Innovation and Research Studio
                     <div style="margin-top: 5px;">
                         Licensed under <a href="https://license.dubhenexus.org/dnl/" style="color: #444; font-weight: 500;">DNL ATT-NC-SL</a>
                     </div>
                 </div>
-                <div style="text-align: right; text-transform: uppercase; letter-spacing: 0.1em;">
-                    创新 · 构建 · 迭代 · 因势而变
+                <div style="flex: 1; text-align: right;">
+                    <span style="display: block; letter-spacing: 0.1em; color: #888;">创新 · 构建 · 迭代 · 因势而变</span>
+                    <span style="display: block; letter-spacing: 0.1em; color: #888;">Innovate. Construct. Iterate. Adapt.</span>
                 </div>
             </div>
         </div>

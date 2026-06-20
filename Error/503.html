@@ -1,118 +1,323 @@
 <!-- Copyright (c) 2026 Dubhe Nexus Innovation and Research Studio -->
-<!-- Licensed under MIT License -->
+<!-- Licensed under DNL ATT-NC-SL -->
 
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>503 Service Unavailable</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&family=Fira+Code:wght@300..500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         :root {
-            --accent: #000;
-            --gray: #86868b;
-            --border: #e5e5e5;
+            --primary-bg: #ffffff;
+            --text-main: #111111;
+            --text-muted: #8b8b8b;
+            --accent-gray: #f9f9fb;
+            --border-color: #efefef;
+            --container-width: 2000px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            margin: 0;
-            background-color: #ffffff;
-            color: var(--accent);
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-weight: 300;
+            line-height: 1.5;
             display: flex;
             flex-direction: column;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
 
-        .main {
+        .glass-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            z-index: 100;
+            padding: 1.5rem 0;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 4rem;
+            width: 100%;
+            position: relative;
+        }
+
+        .logo {
+            letter-spacing: 0.3em;
+            font-weight: 400;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #1a1a1a;
+            font-size: 0.9rem;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .error-wrapper {
             flex: 1;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0 12%;
+            align-items: center;
             position: relative;
+            padding: 8rem 0;
         }
 
         .bg-text {
             position: absolute;
-            font-size: 30vw;
-            font-weight: 900;
-            color: #f5f5f7;
+            font-size: clamp(15rem, 30vw, 26rem);
+            font-weight: 800;
+            color: #f6f6f7;
             z-index: -1;
-            right: 5vw;
-            bottom: -5vh;
+            right: 5%;
+            bottom: -440px;
             user-select: none;
+            letter-spacing: -0.05em;
+            pointer-events: none;
         }
 
-        h1 { font-size: 56px; font-weight: 600; margin: 0; letter-spacing: -2px; }
+        .content-box {
+            width: 100%;
+            animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 200;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+        }
 
         .description {
-            font-size: 20px;
-            color: var(--gray);
-            max-width: 1000px;
-            margin: 24px 0;
-            line-height: 1.6;
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 4rem;
+            max-width: 600px;
         }
 
         .status-block {
+            background: var(--accent-gray);
+            padding: 1.5rem 1rem 1.5rem 1rem;
+            border-left: 4px solid #000;
             display: inline-block;
-            background: #f5f5f7;
-            padding: 10px 16px;
-            border-left: 3px solid #000;
-            font-family: "SFMono-Regular", Consolas, monospace;
-            font-size: 14px;
-            margin: 20px 0;
-            width: fit-content;
+            min-width: 450px;
+            margin-bottom: 4rem;
         }
 
-        .status-block span { color: #d63031; font-weight: 600; }
+        .status-code {
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #444;
+            letter-spacing: 0.05em;
+        }
 
-        footer {
-            padding: 60px 12%;
-            font-size: 12px;
-            color: var(--gray);
+        .status-code span {
+            color: #d63031;
+            font-weight: 600;
+            margin-left: 12px;
+
+        .footer {
+            background: #fff;
+            border-top: 1px solid var(--border-color);
+            padding: 2.5rem 0 1.8rem;
+        }
+
+        .footer-grid {
             display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            border-top: 1px solid var(--border);
-            line-height: 1.8;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 2rem;
         }
 
-        .contact { text-align: right; }
-        .contact a { color: var(--accent); text-decoration: none; font-weight: 600; }
+        .footer-logo {
+            font-size: 0.875rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-bottom: 0.75rem;
+        }
 
-        @media (max-width: 768px) {
-            .main { padding: 0 8%; }
-            footer { padding: 40px 8%; grid-template-columns: 1fr; gap: 20px; }
-            .contact { text-align: left; }
+        .footer-social a {
+            color: #555;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .footer-social a:hover {
+            color: #000;
+        }
+
+        .footer-contact {
+            text-align: right;
+        }
+
+        .footer-contact h4 {
+            font-size: 10px;
+            letter-spacing: 0.3em;
+            color: #bbb;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .footer-contact a {
+            display: block;
+            font-size: 0.875rem;
+            color: #3a3a3a;
+            text-decoration: none;
+            margin-bottom: 0.6rem;
+            transition: all 0.3s;
+        }
+
+        .footer-contact a:hover {
+            color: #000;
+            transform: translateX(-4px);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .footer-copyright {
+            padding-top: 1.2rem;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 10px;
+            color: #aaa;
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 2rem;
+            }
+
+            .status-block {
+                min-width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-contact {
+                text-align: left;
+            }
+
+            .bg-text {
+                right: -5%;
+                opacity: 0.4;
+                bottom: -10%;
+            }
         }
     </style>
 </head>
+
 <body>
-
-    <div class="main">
-        <div class="bg-text">503</div>
-        <h1>维护中</h1>
-        <p class="description">
-            系统目前正在进行维护，以提供更优质的服务<br>
-            感谢您的理解与支持
-        </p>
-        
-        <div class="status-block">
-            STATUS_CODE: <span>HTTP 503 SERVICE UNAVAILABLE</span>
+    <nav class="glass-nav">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="../images/Dubhe Nexus Web.jpg" alt="Logo">
+            </a>
         </div>
-    </div>
+    </nav>
 
-    <footer>
-        <div class="copyright">
-            © 2026 Virtual Airport Authority Hong Kong, VAAHK<br>
-            © 2026 Dubhe Nexus Aviation Interconnection Network
+    <main class="error-wrapper">
+        <div class="container">
+            <div class="bg-text">503</div>
+
+            <div class="content-box">
+                <h1>维护中 / Service Unavailable</h1>
+                <p class="description">
+                    服务器当前无法处理请求，可能因维护或过载<br>
+                    The server is temporarily unable to handle the request.
+                </p>
+
+                <div class="status-block">
+                    <div class="status-code">
+                        STATUS_CODE: <span>HTTP 503 SERVICE UNAVAILABLE</span>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
-        <div class="contact">
-            Support<br>
-            <a href="mailto:support@dubhe-nexus.virtual-vaahk.org">support@dubhe-nexus.virtual-vaahk.org</a>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo" style="display: flex; align-items: center; gap: 10px;">
+                        <img src="../images/Dubhe Nexus 1.1.jpg" alt="Logo" style="height: 45px; border-radius: 3px;">
+                        天枢互联创研工作室<br>Dubhe Nexus Innovation and Research Studio
+                    </div>
+                    <div class="footer-social" style="margin-top: 12px; display: flex; gap: 15px;">
+                        <a href="https://github.com/Dubhe-Nexus" target="_blank" rel="noopener noreferrer"
+                            style="color: #555; font-size: 18px; transition: color 0.3s;"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://qm.qq.com/q/w6MtG2lsIM" target="_blank" rel="noopener noreferrer"
+                            style="color: #555; font-size: 18px; transition: color 0.3s;"><i
+                                class="fa-brands fa-qq"></i></a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系我们</h4>
+                    <a href="mailto:support@dubhenexus.org">support@dubhenexus.org</a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div style="flex: 1; text-align: left;">
+                    &copy; 2026 Dubhe Nexus Innovation and Research Studio
+                    <div style="margin-top: 5px;">
+                        Licensed under <a href="https://license.dubhenexus.org/dnl/" style="color: #444; font-weight: 500;">DNL ATT-NC-SL</a>
+                    </div>
+                </div>
+                <div style="flex: 1; text-align: right;">
+                    <span style="display: block; letter-spacing: 0.1em; color: #888;">创新 · 构建 · 迭代 · 因势而变</span>
+                    <span style="display: block; letter-spacing: 0.1em; color: #888;">Innovate. Construct. Iterate. Adapt.</span>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
+
 </html>

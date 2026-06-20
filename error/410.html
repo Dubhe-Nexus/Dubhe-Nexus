@@ -1,5 +1,5 @@
 <!-- Copyright (c) 2026 Dubhe Nexus Innovation and Research Studio -->
-<!-- Licensed under MIT License -->
+<!-- Licensed under DNL ATT-NC-SL -->
 
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -180,11 +180,11 @@
         }
 
         .footer-logo {
-            font-size: 0.9rem;
+            font-size: 0.875rem;
             letter-spacing: 0.3em;
             text-transform: uppercase;
             font-weight: 300;
-            line-height: 1.8;
+            margin-bottom: 0.75rem;
         }
 
         .footer-social {
@@ -230,7 +230,10 @@
             justify-content: space-between;
             font-size: 11px;
             color: #aaa;
-        }
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 10px;
 
         @media (max-width: 992px) {
             .container {
@@ -273,10 +276,11 @@
             <div class="bg-text">410</div>
 
             <div class="content-box">
-                <h1>此页面已永久移除</h1>
+                <h1>此页面已永久移除 / Gone</h1>
                 <p class="description">
                     您访问的页面已被 <b>天枢互联 Dubhe Nexus</b> 永久移除<br>
                     该资源将不再提供访问及重定向支持
+                <br>The resource you requested has been permanently removed.
                 </p>
 
                 <div class="status-block">
@@ -284,6 +288,12 @@
                         STATUS_CODE: <span>HTTP 410 GONE</span>
                     </div>
                 </div>
+
+                <div class="back-home" style="display:flex; gap: 2rem;">
+                    <a href="/">返回首页</a>
+                    <a href="/en/">Go Home</a>
+                </div>
+
             </div>
         </div>
     </main>
@@ -297,8 +307,8 @@
                         天枢互联创研工作室<br>Dubhe Nexus Innovation and Research Studio
                     </div>
                     <div class="footer-social">
-                        <a href="https://github.com/Dubhe-Nexus" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://qm.qq.com/q/w6MtG2lsIM" target="_blank"><i class="fa-brands fa-qq"></i></a>
+                        <a href="https://github.com/Dubhe-Nexus" target="_blank" rel="noopener noreferrer" style="color: #555; font-size: 18px; transition: color 0.3s;"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://qm.qq.com/q/w6MtG2lsIM" target="_blank" rel="noopener noreferrer" style="color: #555; font-size: 18px; transition: color 0.3s;"><i class="fa-brands fa-qq"></i></a>
                     </div>
                 </div>
                 <div class="footer-contact">
@@ -308,14 +318,15 @@
             </div>
 
             <div class="footer-copyright">
-                <div style="text-align: left;">
+                <div style="flex: 1; text-align: left;">
                     &copy; 2026 Dubhe Nexus Innovation and Research Studio
                     <div style="margin-top: 5px;">
-                        Licensed under <a href="license.html" style="color: #444; font-weight: 500;">MIT</a>
+                        Licensed under <a href="https://license.dubhenexus.org/dnl/" style="color: #444; font-weight: 500;">DNL ATT-NC-SL</a>
                     </div>
                 </div>
-                <div style="text-align: right; text-transform: uppercase; letter-spacing: 0.1em;">
-                    创新 · 构建 · 迭代 · 因势而变
+                <div style="flex: 1; text-align: right;">
+                    创新 · 构建 · 迭代 · 因势而变</span>
+                    <span style="display: block; letter-spacing: 0.1em; color: #888;">Innovate. Construct. Iterate. Adapt.</span>
                 </div>
             </div>
         </div>
