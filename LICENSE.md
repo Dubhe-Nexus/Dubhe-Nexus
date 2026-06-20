@@ -1,11 +1,13 @@
 # Dubhe Nexus Software Open Source License  
 
 The documentation and code of this project are licensed under the **Dubhe Nexus Software Open Source License (DNL)**. The specific scope of authorization and restrictions are determined by the module combination code identified in the project.  
+
 Based on the selected module combination, you are generally free to:  
+
 **Access and Read** — Obtain and study the code design and logic of this software.  
 **Share** — Copy and redistribute the material in any medium or format (subject to REF module restrictions).    
 **Adapt** — Remix, transform, or build upon the material for secondary development (subject to REF module restrictions).
----
+
 Under the following terms (effective only when the corresponding module code is declared in the project):  
 
 **ATT — Attribution**  
@@ -22,13 +24,12 @@ This software is provided strictly for "learning and reference." It is strictly 
 
 **SL — Same-License**  
 If you adapt, modify, or build upon the material, you must:  
-Distribute your derivative works under the DN-OSL license containing the exact same module collection as the original software (unauthorized removal or addition of modules is prohibited);  
-
-Mandatorily disclose the complete source code; closed-source distribution or code obfuscation is strictly prohibited;  
+Distribute your derivative works under the DN-OSL license containing the exact same module collection as the original software (unauthorized removal or addition of modules is prohibited);   
+Mandatorily disclose the complete source code;    
+closed-source distribution or code obfuscation is strictly prohibited;  
 Explicitly declare the license link.  
 (Exemptions apply for personal local learning or internal, non-public network service use).  
 
 **No Additional Restrictions** — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits, nor may you circumvent the restrictions of the established modules above.  
 
 Only applicable to pages or files explicitly marked as complying with the [Dubhe Nexus Software Open Source License](https://license.dubhenexus.org/dnl/) Agreement. See full legal text for complete provisions and module definitions.
----
