@@ -1,0 +1,495 @@
+{
+  "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "paint": {
+        "background-color": "#ffffff"
+      },
+      "type": "background"
+    },
+    {
+      "filter": [
+        "in",
+        [
+          "get",
+          "class"
+        ],
+        [
+          "literal",
+          [
+            "park",
+            "wood",
+            "grass",
+            "cemetery",
+            "golf"
+          ]
+        ]
+      ],
+      "id": "vfr-landuse",
+      "paint": {
+        "fill-color": "#e7efd6",
+        "fill-opacity": 0.55
+      },
+      "source": "mapbox-streets",
+      "source-layer": "landuse",
+      "type": "fill"
+    },
+    {
+      "id": "vfr-water",
+      "paint": {
+        "fill-color": "#d8eff6",
+        "fill-outline-color": "#3fcbf6"
+      },
+      "source": "mapbox-streets",
+      "source-layer": "water",
+      "type": "fill"
+    },
+    {
+      "id": "vfr-waterway",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "minzoom": 6,
+      "paint": {
+        "line-color": "#94d8ed",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6, 0.3, 12, 2]
+      },
+      "source": "mapbox-streets",
+      "source-layer": "waterway",
+      "type": "line"
+    },
+    {
+      "id": "runway",
+      "layout": {
+        "line-cap": "square",
+        "line-join": "bevel"
+      },
+      "minzoom": 8,
+      "paint": {
+        "line-color": "#fafafa",
+        "line-opacity": 0.95,
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8, 1.2, 12, 4.5]
+      },
+      "source": "skylite-navdata",
+      "source-layer": "runway",
+      "type": "line"
+    },
+    {
+      "id": "airway-casing",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "minzoom": 4,
+      "paint": {
+        "line-blur": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3, 0.2, 8, 4],
+        "line-color": "#ffffff",
+        "line-opacity": 0.9,
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3, 0.8, 8, 5]
+      },
+      "source": "skylite-navdata",
+      "source-layer": "airway",
+      "type": "line"
+    },
+    {
+      "id": "airway-shadow",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "minzoom": 5,
+      "paint": {
+        "line-color": "#000000",
+        "line-dasharray": [2, 2],
+        "line-opacity": 0.25,
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5, 0.4, 8, 1]
+      },
+      "source": "skylite-navdata",
+      "source-layer": "airway",
+      "type": "line"
+    },
+    {
+      "id": "airway",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "minzoom": 4,
+      "paint": {
+        "line-color": "#000000",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          2, 0.45, 5, 1],
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3, 0.25, 8, 1.1]
+      },
+      "source": "skylite-navdata",
+      "source-layer": "airway",
+      "type": "line"
+    },
+    {
+      "id": "airway-label",
+      "layout": {
+        "icon-image": [
+          "concat",
+          "awy",
+          [
+            "min",
+            19, [
+              "max",
+              3, [
+                "+",
+                [
+                  "length",
+                  [
+                    "get",
+                    "txt"
+                  ]
+                ],
+                1]
+            ]
+          ]
+        ],
+        "icon-padding": 0,
+        "icon-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6, 0.5, 9, 0.7],
+        "text-allow-overlap": false,
+        "text-field": [
+          "get",
+          "txt"
+        ],
+        "text-font": [
+          "Open Sans Semibold"
+        ],
+        "text-padding": 0,
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5, 8, 9, 11]
+      },
+      "minzoom": 5,
+      "paint": {
+        "icon-color": "#000000",
+        "icon-halo-color": "#ffffff",
+        "icon-halo-width": 0.8,
+        "text-color": "#ffffff"
+      },
+      "source": "skylite-navdata",
+      "source-layer": "airway-label",
+      "type": "symbol"
+    },
+    {
+      "id": "airport",
+      "layout": {
+        "icon-allow-overlap": true,
+        "icon-image": [
+          "get",
+          "icon"
+        ],
+        "icon-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          4, 0.22, 8, 0.55]
+      },
+      "minzoom": 2,
+      "paint": {
+        "icon-color": "#1769aa",
+        "icon-halo-color": "#ffffff",
+        "icon-halo-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5, 0.2, 8, 0.8]
+      },
+      "source": "skylite-navdata",
+      "source-layer": "airport",
+      "type": "symbol"
+    },
+    {
+      "id": "airport-label",
+      "layout": {
+        "text-field": [
+          "get",
+          "txt"
+        ],
+        "text-font": [
+          "Open Sans Semibold"
+        ],
+        "text-padding": 8,
+        "text-radial-offset": 1,
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5, 8, 8, 12],
+        "text-variable-anchor": [
+          "top",
+          "bottom",
+          "left",
+          "right",
+          "top-left",
+          "top-right",
+          "bottom-left",
+          "bottom-right"
+        ]
+      },
+      "minzoom": 3,
+      "paint": {
+        "text-color": "#1769aa",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1
+      },
+      "source": "skylite-navdata",
+      "source-layer": "airport",
+      "type": "symbol"
+    },
+    {
+      "id": "navaid",
+      "layout": {
+        "icon-allow-overlap": true,
+        "icon-ignore-placement": true,
+        "icon-image": [
+          "get",
+          "icon"
+        ],
+        "icon-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5, 0.22, 8, 0.55]
+      },
+      "minzoom": 5,
+      "paint": {
+        "icon-color": "#202020",
+        "icon-halo-color": "#ffffff",
+        "icon-halo-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5, 0.5, 8, 1]
+      },
+      "source": "skylite-navdata",
+      "source-layer": "navaid",
+      "type": "symbol"
+    },
+    {
+      "id": "navaid-label",
+      "layout": {
+        "text-field": [
+          "get",
+          "ident"
+        ],
+        "text-font": [
+          "Open Sans Semibold"
+        ],
+        "text-padding": 8,
+        "text-radial-offset": 1,
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5, 6, 8, 10.5],
+        "text-variable-anchor": [
+          "bottom",
+          "right",
+          "left",
+          "top"
+        ]
+      },
+      "minzoom": 5,
+      "paint": {
+        "text-color": "#202020",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1
+      },
+      "source": "skylite-navdata",
+      "source-layer": "navaid",
+      "type": "symbol"
+    },
+    {
+      "id": "waypoint",
+      "layout": {
+        "icon-allow-overlap": true,
+        "icon-ignore-placement": true,
+        "icon-image": [
+          "get",
+          "icon"
+        ],
+        "icon-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5, 0.2, 8, 0.48]
+      },
+      "minzoom": 5,
+      "paint": {
+        "icon-color": "#000000",
+        "icon-halo-color": "#ffffff",
+        "icon-halo-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5, 0.4, 8, 0.9]
+      },
+      "source": "skylite-navdata",
+      "source-layer": "waypoint",
+      "type": "symbol"
+    },
+    {
+      "id": "waypoint-label",
+      "layout": {
+        "text-field": [
+          "get",
+          "ident"
+        ],
+        "text-font": [
+          "Open Sans Semibold"
+        ],
+        "text-padding": 8,
+        "text-radial-offset": 1,
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6, 6, 8, 10.5],
+        "text-variable-anchor": [
+          "bottom",
+          "right",
+          "left",
+          "top"
+        ]
+      },
+      "minzoom": 6,
+      "paint": {
+        "text-color": "#111111",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1
+      },
+      "source": "skylite-navdata",
+      "source-layer": "waypoint",
+      "type": "symbol"
+    }
+  ],
+  "name": "Skylite IFR-LOW Enroute",
+  "sources": {
+    "mapbox-streets": {
+      "type": "vector",
+      "url": "mapbox://mapbox.mapbox-streets-v8"
+    },
+    "skylite-navdata": {
+      "attribution": "Skylite navdata 2606",
+      "maxzoom": 14,
+      "minzoom": 0,
+      "tiles": [
+        "https://navigation.api.skylitefly.com/api/charts/ifr-low/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    }
+  },
+  "sprite": "https://navigation.api.skylitefly.com/api/charts/sprite/sprite",
+  "version": 8
+}
