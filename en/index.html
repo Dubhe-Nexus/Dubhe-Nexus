@@ -1,5 +1,5 @@
 <!-- Copyright (c) 2026 Dubhe Nexus Innovation and Research Studio -->
-<!-- Licensed under MIT License -->
+<!-- Licensed under DNL ATT-NC-SL -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,8 +7,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>天枢互联 | Dubhe Nexus</title>
-    <link rel="icon" type="image/jpeg" href="../images/Dubhe Nexus 1.1.jpg">
+    <title>Dubhe Nexus</title>
+    <link rel="icon" type="image/svg+xml" href="../images/Dubhe-Nexus.svg">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap"
         rel="stylesheet">
@@ -21,13 +21,13 @@
     <nav class="glass-nav" id="navbar">
         <div class="nav-container">
             <a href="/en/" class="logo">
-                <img src="../images/Dubhe Nexus Web.jpg" alt="Logo">
+                <img src="../images/Dubhe-Nexus-Web.jpg" alt="Logo">
             </a>
             <div class="nav-links">
                 <a href="#philosophy">Philosophy</a>
+                <a href="#projects">Projects</a>
                 <a href="https://data.dubhenexus.org" target="_blank">Data Service</a>
                 <a href="https://service.dubhenexus.org" target="_blank">EFB</a>
-                <a href="#projects">Projects</a>
                 <a href="#about">About Us</a>
                 <a href="#contact">Contact Us</a>
                 <a href="/" class="lang-switch"><i data-lucide="languages"></i>中</a>
@@ -36,111 +36,169 @@
     </nav>
 
     <section class="hero-section">
-        <canvas id="hero-canvas"></canvas>
-        <div class="hero-content">
-            <div>
-                <div class="hero-eyebrow">Innovate. Construct. Iterate.
-                    Adapt.</div>
-                <h1 class="hero-title">
-                    Focus on flight simulation<br>
-                    <span>Tool Development and Data Exploration</span>
+        <div class="hero-grid">
+            <div class="hero-left">
+                <div class="hero-eyebrow fade-up">Innovate. Construct. Iterate. Adapt.</div>
+                <h1 class="hero-title fade-up">
+                    Flight Simulation & Minecraft<br>
+                    <span>Community Tools & Data Exploration</span>
                 </h1>
-                <div class="hero-desc">
+                <div class="hero-desc fade-up">
                     <p>Dubhe Nexus Innovation and Research Studio<br>天枢互联创研工作室</p>
+                </div>
+                <div class="hero-actions fade-up">
+                    <a href="#projects" class="btn-primary">Explore Projects</a>
+                    <a href="#about" class="btn-ghost">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-image-wrapper parallax-img" data-speed="0.15">
+                    <img src="../images/hero-bg.png" alt="Aviation Technology" class="hero-image">
+                    <div class="hero-image-overlay"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <main>
-        <div class="container">
-
-            <section id="philosophy" class="philosophy-section">
-                <div class="section-title fade-up">Team Philosophy</div>
+        <section id="philosophy" class="philosophy-section">
+            <div class="container">
+                <div class="philosophy-layout">
+                    <div class="philosophy-header">
+                        <div class="section-tag fade-up">Team Philosophy</div>
+                        <div class="section-title fade-up">Our Philosophy</div>
+                        <p class="philosophy-intro fade-up">We believe that a strong team culture is the foundation of product success.</p>
+                    </div>
+                    <div class="philosophy-image fade-right">
+                        <div class="img-frame parallax-img" data-speed="0.1">
+                            <img src="../images/philosophy-img.JPG" alt="Team Philosophy">
+                        </div>
+                    </div>
+                </div>
                 <div class="philosophy-grid">
                     <div class="pillar-card scale-in">
-                        <h3>Unity
-                            of Knowledge and Action</h3>
-                        <p>Action always takes precedence over perfection. Rather than a long wait, we prefer to bring
-                            ideas to life quickly and validate their functional value in real-world scenarios.</p>
+                        <span class="pillar-num">01</span>
+                        <h3>Unity of Knowledge and Action</h3>
+                        <p>Action always takes precedence over perfection. Rather than a long wait, we prefer to bring ideas to life quickly and validate their functional value in real-world scenarios.</p>
                     </div>
                     <div class="pillar-card scale-in">
-                        <h3>Simplicity
-                            and Humility</h3>
-                        <p>We reject over-design and complex internal conflicts. Maintaining simplicity, low cost, and
-                            high efficiency are our core principles for combating development chaos.</p>
+                        <span class="pillar-num">02</span>
+                        <h3>Simplicity and Humility</h3>
+                        <p>We reject over-design and complex internal conflicts. Maintaining simplicity, low cost, and high efficiency are our core principles for combating development chaos.</p>
                     </div>
                     <div class="pillar-card scale-in">
-                        <h3>Going
-                            with the Flow</h3>
-                        <p>User needs and immediate feedback determine the direction of a project. We dynamically adjust
-                            the development priority of features based on actual usage scenarios.</p>
+                        <span class="pillar-num">03</span>
+                        <h3>Going with the Flow</h3>
+                        <p>User needs and immediate feedback determine the direction of a project. We dynamically adjust the development priority of features based on actual usage scenarios.</p>
                     </div>
                     <div class="pillar-card scale-in">
-                        <h3></i>Continuous
-                            Growth</h3>
-                        <p>Every release is not the end, but the beginning of evolution. We optimize our products
-                            through continuous iteration and maintain their vitality amidst change.</p>
+                        <span class="pillar-num">04</span>
+                        <h3>Continuous Growth</h3>
+                        <p>Every release is not the end, but the beginning of evolution. We optimize our products through continuous iteration and maintain their vitality amidst change.</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="projects" class="projects-section">
-                <div class="section-title fade-up">Products and Services</div>
-                <div class="projects-sub fade-up">Focusing on aviation data processing and community tool development
-                </div>
+        <div class="parallax-break">
+            <div class="parallax-break-img parallax-img" data-speed="0.3">
+                <img src="../images/parallax-break.JPG" alt="">
+            </div>
+            <div class="parallax-break-content fade-up">
+                <span class="break-label">Since 2024</span>
+                <span class="break-divider"></span>
+                <span class="break-text">Creating value for the flight simulation community</span>
+            </div>
+        </div>
+
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-tag fade-up">Products and Services</div>
+                <div class="section-title fade-up">What We Build</div>
+                <div class="projects-sub fade-up">Focusing on aviation data processing and community tool development</div>
 
                 <div class="projects-grid">
                     <a href="https://data.dubhenexus.org" target="_blank" rel="noopener noreferrer"
                         class="project-card scale-in">
-                        <div class="project-badge">Data Service</div>
-                        <div class="project-title">Dubhe Nexus Data Service
-                            Document Center</div>
-                        <div class="project-desc">Provides integration and structured distribution of METAR, TAF, and
-                            global airport basic data to help developers quickly access and utilize them.</div>
-                        <div class="project-link">Access →</div>
+                        <div class="project-card-inner">
+                            <div class="project-badge">Data Service</div>
+                            <div class="project-title">Dubhe Nexus Data Service</div>
+                            <div class="project-desc">Provides integration and structured distribution of METAR, TAF, and global airport basic data to help developers quickly access and utilize them.</div>
+                            <div class="project-link">Access <span>&rarr;</span></div>
+                        </div>
                     </a>
                     <a href="https://service.dubhenexus.org" target="_blank" rel="noopener noreferrer"
                         class="project-card scale-in">
-                        <div class="project-badge">Data Service</div>
-                        <div class="project-title">Service
-                            Center</div>
-                        <div class="project-desc">Provides real-time METAR, TAF, and airport data queries for airports
-                            worldwide (limited to those with publicly available data).</div>
-                        <div class="project-link">Access →</div>
+                        <div class="project-card-inner">
+                            <div class="project-badge">Data Service</div>
+                            <div class="project-title">EFB</div>
+                            <div class="project-desc">Provides real-time METAR, TAF, and airport data queries for airports worldwide (limited to those with publicly available data).</div>
+                            <div class="project-link">Access <span>&rarr;</span></div>
+                        </div>
                     </a>
                     <a href="https://game.dubhenexus.org" target="_blank" rel="noopener noreferrer"
                         class="project-card scale-in">
-                        <div class="project-badge">Game</div>
-                        <div class="project-title">Mini-games
+                        <div class="project-card-inner">
+                            <div class="project-badge">Game</div>
+                            <div class="project-title">Mini-games</div>
+                            <div class="project-desc">A series of lightweight web-based mini-games designed to enhance development skills and provide engaging interactive experiences.</div>
+                            <div class="project-link">Access <span>&rarr;</span></div>
                         </div>
-                        <div class="project-desc">A series of lightweight web-based mini-games designed to enhance
-                            development skills and provide engaging interactive experiences.</div>
-                        <div class="project-link">Access →</div>
                     </a>
                     <a href="https://www.virtual-vaahk.org" target="_blank" rel="noopener noreferrer"
                         class="project-card scale-in">
-                        <div class="project-badge">Community Platform</div>
-                        <div class="project-title">Virtual
-                            Airport Authority Hong Kong</div>
-                        <div class="project-desc">Virtual Airport Authority Hong Kong, VAAHK Official Website</div>
-                        <div class="project-link">Access →</div>
+                        <div class="project-card-inner">
+                            <div class="project-badge">Community Platform</div>
+                            <div class="project-title">Virtual Airport Authority Hong Kong</div>
+                            <div class="project-desc">Virtual Airport Authority Hong Kong, VAAHK Official Website</div>
+                            <div class="project-link">Access <span>&rarr;</span></div>
+                        </div>
                     </a>
                     <a href="https://wag.dubhenexus.org" target="_blank" rel="noopener noreferrer"
                         class="project-card scale-in">
-                        <div class="project-badge">Community Platform</div>
-                        <div class="project-title"></i>Wan Yuan Airline</div>
-                        <div class="project-desc">Wan Yuan Airline Official Website</div>
-                        <div class="project-link">Access →</div>
+                        <div class="project-card-inner">
+                            <div class="project-badge">Community Platform</div>
+                            <div class="project-title">Wan Yuan Airline</div>
+                            <div class="project-desc">Wan Yuan Airline Official Website</div>
+                            <div class="project-link">Access <span>&rarr;</span></div>
+                        </div>
                     </a>
+                    <div class="project-card scale-in project-card-soon">
+                        <div class="project-card-inner">
+                            <div class="project-badge">Minecraft</div>
+                            <div class="project-title">StarChart Port</div>
+                            <div class="project-desc">A Minecraft creative city currently under construction. Independently built. A server launch is planned in the future under the Dubhe Nexus community.</div>
+                            <div class="project-link project-soon-badge">Coming Soon <span>&rarr;</span></div>
+                        </div>
+                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="technology-stack" class="technology-stack-section">
-                <div class="container">
-                    <div class="section-title fade-up">Technology Stack</div>
+        <div class="parallax-break mc-parallax">
+            <div class="parallax-break-img parallax-img" data-speed="0.3">
+                <img src="../images/mc-break.png" alt="">
+            </div>
+            <div class="parallax-break-content fade-up">
+                <span class="break-label">StarChart Port</span>
+                <span class="break-divider"></span>
+                <span class="break-text">Create & Build</span>
+            </div>
+        </div>
 
-                    <div class="technology-stack-grid">
+        <section id="technology-stack" class="tech-section">
+            <div class="container">
+                <div class="tech-layout">
+                    <div class="tech-left">
+                        <div class="section-tag fade-up">Technology Stack</div>
+                        <div class="section-title fade-up">Our Tech</div>
+                        <div class="tech-image-wrapper fade-left">
+                            <div class="img-frame parallax-img" data-speed="0.12">
+                                <img src="../images/tech-img.JPG" alt="Technology">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech-right">
                         <div class="tech-group scale-in">
                             <div class="group-header">
                                 <span class="group-no">01</span>
@@ -151,7 +209,7 @@
                                 <div class="tech-item-mini"><i class="fa-brands fa-css3-alt"></i> CSS</div>
                                 <div class="tech-item-mini"><i class="fa-solid fa-code"></i> Tailwind CSS</div>
                                 <div class="tech-item-mini"><i class="fa-brands fa-js"></i> JavaScript</div>
-                                <div class="tech-item-mini"><i class="fa-solid fa-code"></i></i> JavaScript XML</div>
+                                <div class="tech-item-mini"><i class="fa-solid fa-code"></i> JSX</div>
                                 <div class="tech-item-mini"><i class="fa-solid fa-code"></i> TypeScript</div>
                             </div>
                         </div>
@@ -194,54 +252,72 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="about" class="about-section">
-                <div class="about-grid">
-                    <div class="about-left fade-left">
-                        <h2>About Us<br><span style="font-size: 0.6em; color: #8b8b8b;">Dubhe Nexus Innovation and
-                                Research Studio</span></h2>
-                        <hr>
+        <div class="parallax-break">
+            <div class="parallax-break-img parallax-img" data-speed="0.25">
+                <img src="../images/parallax-break2.png" alt="">
+            </div>
+            <div class="parallax-break-content fade-up">
+                <span class="break-label">Lightweight</span>
+                <span class="break-divider"></span>
+                <span class="break-text">Simple, Efficient, Practical</span>
+            </div>
+        </div>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-layout">
+                    <div class="about-left">
+                        <div class="section-tag fade-up">About Us</div>
+                        <div class="about-title fade-up">About Us</div>
+                        <div class="about-subtitle fade-up">Dubhe Nexus Innovation and Research Studio</div>
+                        <div class="about-text fade-up">
+                            <p>Dubhe Nexus is an independent development team focused on the field of flight simulation. We started as a large community platform and have now transformed into an agile development model centered on "lightweight tools + data services".</p>
+                            <p>Our core businesses include: <strong>Aviation Data API</strong> (providing professional and easy-to-use public data interfaces), <strong>Community Operation System</strong> and many <strong>Utility Tools</strong>. We are not simply piling up products; we are searching for the optimal path to solve industry pain points.</p>
+                            <p>The team believes in the values of "simplicity, efficiency, and practicality." Our strategy is very clear: rapid build, low-cost maintenance, feedback-driven, and avoiding introducing unnecessary complexity in the early stages of a project.</p>
+                        </div>
+                        <div class="about-note fade-up">Current Focus: Data API Optimization, System Stability, Core Tool Maintenance</div>
                     </div>
                     <div class="about-right fade-right">
-                        <p>Dubhe Nexus is an independent development team focused on the field of flight simulation. We
-                            started as a large community platform and have now transformed into an agile development
-                            model centered on "lightweight tools + data services".</p>
-                        <p>Our core businesses include:<strong style="font-weight: 500;">Aviation Data
-                                API</strong>(Provides professional and easy-to-use public data interfaces)、
-                            <strong style="font-weight: 500;">Community Operation System</strong> and many others
-                            <strong style="font-weight: 500;">Utility tools</strong>. We are not simply piling up
-                            products; we are searching for the optimal path to solve industry pain points.
-                        </p>
-                        <p>The team believes in the values ​​of "simplicity, efficiency, and practicality." Our strategy
-                            is very clear: rapid build, low-cost maintenance, feedback-driven, and avoiding introducing
-                            unnecessary complexity in the early stages of a project.</p>
-                    </div>
-                </div>
-            </section>
-
-            <div class="info-section">
-                <div class="info-block fade-left">
-                    <h3>Agile Development Space</h3>
-                    <p>Dubhe Nexus does not pursue commercial scale; we value the flexibility and practical application
-                        of our technology. Our project implementation approach leans towards a lightweight model, aiming
-                        to meet the real needs of flight simulation enthusiasts and developers through rapid iteration.
-                    </p>
-                </div>
-                <div class="info-block fade-right">
-                    <h3>Service Guarantee</h3>
-                    <p>Although the project is in its growth stage, some interfaces and functions may be optimized and
-                        adjusted according to the technical architecture, but we will do our best to ensure the
-                        stability of core services. We welcome suggestions and feedback from our users.</p>
-                    <div class="info-tags">
-                        <span>Continuous iteration</span>
-                        <span>Efficiency first</span>
-                        <span>Technology open</span>
+                        <div class="about-image-stack">
+                            <div class="img-frame about-img-main parallax-img" data-speed="0.08">
+                                <img src="../images/about-img.JPG" alt="About Dubhe Nexus">
+                            </div>
+                            <div class="about-stat-card">
+                                <div class="stat-number">5+</div>
+                                <div class="stat-label">Live Projects</div>
+                            </div>
+                            <div class="about-stat-card stat-card-2">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">Service Uptime</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-        </div>
+        <section class="info-section">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-block fade-left">
+                        <h3>Agile Development Space</h3>
+                        <p>Dubhe Nexus does not pursue commercial scale; we value the flexibility and practical application of our technology. Our project implementation approach leans towards a lightweight model, aiming to meet the real needs of flight simulation enthusiasts and developers through rapid iteration.</p>
+                    </div>
+                    <div class="info-block fade-right">
+                        <h3>Service Guarantee</h3>
+                        <p>Although the project is in its growth stage, some interfaces and functions may be optimized and adjusted according to the technical architecture, but we will do our best to ensure the stability of core services. We welcome suggestions and feedback from our users.</p>
+                        <div class="info-tags">
+                            <span>Continuous Iteration</span>
+                            <span>Efficiency First</span>
+                            <span>Technology Open</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer" id="contact">
@@ -249,7 +325,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="footer-logo" style="display: flex; align-items: center; gap: 10px;">
-                        <img src="../images/Dubhe Nexus 1.1.jpg" alt="Logo" style="height: 45px; border-radius: 3px;">
+                        <img src="../images/Dubhe-Nexus.png" alt="Logo" style="height: 45px; border-radius: 3px;">
                         天枢互联创研工作室<br>Dubhe Nexus Innovation and Research Studio
                     </div>
                     <div class="footer-social" style="margin-top: 12px; display: flex; gap: 15px;">
@@ -281,10 +357,8 @@
                         Licensed under <a href="https://license.dubhenexus.org/dnl/" style="color: #444; font-weight: 500;">DNL ATT-NC-SL</a>
                     </div>
                 </div>
-
                 <div style="flex: 1; text-align: right;">
-                    <span style="display: block; letter-spacing: 0.1em; color: #888;">Innovate. Construct. Iterate.
-                        Adapt.</span>
+                    <span style="display: block; letter-spacing: 0.1em; color: #888;">Innovate. Construct. Iterate. Adapt.</span>
                 </div>
             </div>
         </div>

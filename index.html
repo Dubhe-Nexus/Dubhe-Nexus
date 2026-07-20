@@ -1,5 +1,5 @@
 <!-- Copyright (c) 2026 Dubhe Nexus Innovation and Research Studio -->
-<!-- Licensed under MIT License -->
+<!-- Licensed under DNL ATT-NC-SL -->
 
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>天枢互联 | Dubhe Nexus</title>
-    <link rel="icon" type="image/jpeg" href="images/Dubhe Nexus 1.1.svg">
+    <link rel="icon" type="image/svg+xml" href="images/Dubhe-Nexus.svg">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600&display=swap"
         rel="stylesheet">
@@ -21,7 +21,7 @@
     <nav class="glass-nav" id="navbar">
         <div class="nav-container">
             <a href="/" class="logo">
-                <img src="images/Dubhe Nexus Web.jpg" alt="Logo">
+                <img src="images/Dubhe-Nexus-Web.jpg" alt="Logo">
             </a>
             <div class="nav-links">
                 <a href="#philosophy">理念</a>
@@ -36,52 +36,83 @@
     </nav>
 
     <section class="hero-section">
-        <canvas id="hero-canvas"></canvas>
-        <div class="hero-content">
-            <div>
-                <div class="hero-eyebrow">创新 · 构建 · 迭代 · 因势而变</div>
-                <h1 class="hero-title">
-                    专注模拟飞行<br>
-                    <span>工具开发与数据探索</span>
+        <div class="hero-grid">
+            <div class="hero-left">
+                <div class="hero-eyebrow fade-up">创新 · 构建 · 迭代 · 因势而变</div>
+                <h1 class="hero-title fade-up">
+                    模拟飞行与Minecraft<br>
+                    <span>社区工具与数据探索</span>
                 </h1>
-                <div class="hero-desc">
+                <div class="hero-desc fade-up">
                     <p>天枢互联创研工作室<br>Dubhe Nexus Innovation and Research Studio</p>
+                </div>
+                <div class="hero-actions fade-up">
+                    <a href="#projects" class="btn-primary">探索项目</a>
+                    <a href="#about" class="btn-ghost">了解更多</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-image-wrapper parallax-img" data-speed="0.15">
+                    <img src="images/hero-bg.png" alt="Aviation Technology" class="hero-image">
+                    <div class="hero-image-overlay"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <main>
-        <div class="container">
-
-            <section id="philosophy" class="philosophy-section">
-                <div class="section-tag fade-up">Team Philosophy</div>
-                <div class="section-title fade-up">团队理念</div>
+        <section id="philosophy" class="philosophy-section">
+            <div class="container">
+                <div class="philosophy-layout">
+                    <div class="philosophy-header">
+                        <div class="section-tag fade-up">Team Philosophy</div>
+                        <div class="section-title fade-up">团队理念</div>
+                        <p class="philosophy-intro fade-up">我们相信，优秀的团队文化是产品成功的基石。</p>
+                    </div>
+                    <div class="philosophy-image fade-right">
+                        <div class="img-frame parallax-img" data-speed="0.1">
+                            <img src="images/philosophy-img.JPG" alt="Team Philosophy">
+                        </div>
+                    </div>
+                </div>
                 <div class="philosophy-grid">
                     <div class="pillar-card scale-in">
-                        <h3>知行合一
-                        </h3>
+                        <span class="pillar-num">01</span>
+                        <h3>知行合一</h3>
                         <p>行动，永远优先于完美。比起漫长的等待，我们更倾向于让想法迅速落地，在真实场景中验证功能价值。</p>
                     </div>
                     <div class="pillar-card scale-in">
-                        <h3>抱朴守拙
-                        </h3>
+                        <span class="pillar-num">02</span>
+                        <h3>抱朴守拙</h3>
                         <p>拒绝过度设计与复杂内耗。保持简约、低成本、高效率，是我们对抗开发混乱的核心原则。</p>
                     </div>
                     <div class="pillar-card scale-in">
-                        <h3>顺势而为
-                        </h3>
+                        <span class="pillar-num">03</span>
+                        <h3>顺势而为</h3>
                         <p>用户需求与即时反馈决定项目走向。我们根据实际使用场景，动态调整功能的开发优先级。</p>
                     </div>
                     <div class="pillar-card scale-in">
-                        <h3>生生不息
-                        </h3>
+                        <span class="pillar-num">04</span>
+                        <h3>生生不息</h3>
                         <p>每一次发布都不是终点，而是进化的起点。在持续迭代中优化产品，在变化中保持生命力。</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="projects" class="projects-section">
+        <div class="parallax-break">
+            <div class="parallax-break-img parallax-img" data-speed="0.3">
+                <img src="images/parallax-break.JPG" alt="">
+            </div>
+            <div class="parallax-break-content fade-up">
+                <span class="break-label">Since 2024</span>
+                <span class="break-divider"></span>
+                <span class="break-text">持续为模拟飞行社区创造价值</span>
+            </div>
+        </div>
+
+        <section id="projects" class="projects-section">
+            <div class="container">
                 <div class="section-tag fade-up">Products and Services</div>
                 <div class="section-title fade-up">产品与服务</div>
                 <div class="projects-sub fade-up">专注航空数据处理与社区工具建设</div>
@@ -89,48 +120,85 @@
                 <div class="projects-grid">
                     <a href="https://data.dubhenexus.org" target="_blank" rel="noopener noreferrer"
                         class="project-card scale-in">
-                        <div class="project-badge">数据服务</div>
-                        <div class="project-title"></i>天枢互联数据服务</div>
-                        <div class="project-desc">提供 METAR、TAF 及全球机场基础数据的整合与结构化分发，助力开发者快速调用</div>
-                        <div class="project-link">访问 →</div>
+                        <div class="project-card-inner">
+                            <div class="project-badge">数据服务</div>
+                            <div class="project-title">天枢互联数据服务</div>
+                            <div class="project-desc">提供 METAR、TAF 及全球机场基础数据的整合与结构化分发，助力开发者快速调用</div>
+                            <div class="project-link">访问 <span>&rarr;</span></div>
+                        </div>
                     </a>
                     <a href="https://service.dubhenexus.org" target="_blank" rel="noopener noreferrer"
                         class="project-card scale-in">
-                        <div class="project-badge">数据服务</div>
-                        <div class="project-title"></i>EFB</div>
-                        <div class="project-desc">提供全球机场（仅限有公开数据的机场）实时 METAR，TAF及机场数据查询</div>
-                        <div class="project-link">访问 →</div>
+                        <div class="project-card-inner">
+                            <div class="project-badge">数据服务</div>
+                            <div class="project-title">EFB</div>
+                            <div class="project-desc">提供全球机场（仅限有公开数据的机场）实时 METAR，TAF及机场数据查询</div>
+                            <div class="project-link">访问 <span>&rarr;</span></div>
+                        </div>
                     </a>
                     <a href="https://game.dubhenexus.org" target="_blank" rel="noopener noreferrer"
                         class="project-card scale-in">
-                        <div class="project-badge">游戏</div>
-                        <div class="project-title"></i>小游戏</div>
-                        <div class="project-desc">一系列轻量化网页小游戏，旨在提升开发技能并提供趣味性交互</div>
-                        <div class="project-link">访问 →</div>
+                        <div class="project-card-inner">
+                            <div class="project-badge">游戏</div>
+                            <div class="project-title">小游戏</div>
+                            <div class="project-desc">一系列轻量化网页小游戏，旨在提升开发技能并提供趣味性交互</div>
+                            <div class="project-link">访问 <span>&rarr;</span></div>
+                        </div>
                     </a>
                     <a href="https://www.virtual-vaahk.org" target="_blank" rel="noopener noreferrer"
                         class="project-card scale-in">
-                        <div class="project-badge">社区平台</div>
-                        <div class="project-title"></i>虚拟香港机场管理局 VAAHK</div>
-                        <div class="project-desc">虚拟香港机场管理局 VAAHK 官网</div>
-                        <div class="project-link">访问 →</div>
+                        <div class="project-card-inner">
+                            <div class="project-badge">社区平台</div>
+                            <div class="project-title">虚拟香港机场管理局 VAAHK</div>
+                            <div class="project-desc">虚拟香港机场管理局 VAAHK 官网</div>
+                            <div class="project-link">访问 <span>&rarr;</span></div>
+                        </div>
                     </a>
                     <a href="https://wag.dubhenexus.org" target="_blank" rel="noopener noreferrer"
                         class="project-card scale-in">
-                        <div class="project-badge">社区平台</div>
-                        <div class="project-title"></i>挽苑航空集团 WAG</div>
-                        <div class="project-desc">挽苑航空集团 WAG 官网</div>
-                        <div class="project-link">访问 →</div>
+                        <div class="project-card-inner">
+                            <div class="project-badge">社区平台</div>
+                            <div class="project-title">挽苑航空集团 WAG</div>
+                            <div class="project-desc">挽苑航空集团 WAG 官网</div>
+                            <div class="project-link">访问 <span>&rarr;</span></div>
+                        </div>
                     </a>
+                    <div class="project-card scale-in project-card-soon">
+                        <div class="project-card-inner">
+                            <div class="project-badge">Minecraft</div>
+                            <div class="project-title">星图港 StarChart Port</div>
+                            <div class="project-desc">一座正在建设中的 Minecraft 创造城市，个人独立建造。未来计划开放服务器，加入天枢互联社区。</div>
+                            <div class="project-link project-soon-badge">即将开放 <span>&rarr;</span></div>
+                        </div>
+                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="technology-stack" class="technology-stack-section">
-                <div class="container">
-                    <div class="section-tag fade-up">Technology Stack</div>
-                    <div class="section-title fade-up">技术栈</div>
+        <div class="parallax-break mc-parallax">
+            <div class="parallax-break-img parallax-img" data-speed="0.3">
+                <img src="images/mc-break.png" alt="">
+            </div>
+            <div class="parallax-break-content fade-up">
+                <span class="break-label">StarChart Port</span>
+                <span class="break-divider"></span>
+                <span class="break-text">星图港 · 创造与建造</span>
+            </div>
+        </div>
 
-                    <div class="technology-stack-grid">
+        <section id="technology-stack" class="tech-section">
+            <div class="container">
+                <div class="tech-layout">
+                    <div class="tech-left">
+                        <div class="section-tag fade-up">Technology Stack</div>
+                        <div class="section-title fade-up">技术栈</div>
+                        <div class="tech-image-wrapper fade-left">
+                            <div class="img-frame parallax-img" data-speed="0.12">
+                                <img src="images/tech-img.JPG" alt="Technology">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech-right">
                         <div class="tech-group scale-in">
                             <div class="group-header">
                                 <span class="group-no">01</span>
@@ -141,7 +209,7 @@
                                 <div class="tech-item-mini"><i class="fa-brands fa-css3-alt"></i> CSS</div>
                                 <div class="tech-item-mini"><i class="fa-solid fa-code"></i> Tailwind CSS</div>
                                 <div class="tech-item-mini"><i class="fa-brands fa-js"></i> JavaScript</div>
-                                <div class="tech-item-mini"><i class="fa-solid fa-code"></i></i> JavaScript XML</div>
+                                <div class="tech-item-mini"><i class="fa-solid fa-code"></i> JavaScript XML</div>
                                 <div class="tech-item-mini"><i class="fa-solid fa-code"></i> TypeScript</div>
                             </div>
                         </div>
@@ -152,7 +220,7 @@
                                 <span class="group-label">前端框架与生态</span>
                             </div>
                             <div class="tech-list">
-                                <div class="tech-item-mini"><i class="fa-solid fa-code"></i></i> Next.js</div>
+                                <div class="tech-item-mini"><i class="fa-solid fa-code"></i> Next.js</div>
                                 <div class="tech-item-mini"><i class="fa-brands fa-vuejs"></i> Vue.js</div>
                                 <div class="tech-item-mini"><i class="fa-brands fa-react"></i> React</div>
                             </div>
@@ -184,43 +252,73 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="about" class="about-section">
-                <div class="about-grid">
-                    <div class="about-left fade-left">
-                        <h2>关于我们<br><span style="font-size: 0.6em; color: #8b8b8b;">天枢互联 · Dubhe Nexus</span></h2>
-                        <hr>
+        <div class="parallax-break">
+            <div class="parallax-break-img parallax-img" data-speed="0.25">
+                <img src="images/parallax-break2.png" alt="">
+            </div>
+            <div class="parallax-break-content fade-up">
+                <span class="break-label">Lightweight</span>
+                <span class="break-divider"></span>
+                <span class="break-text">简约 · 高效 · 实用</span>
+            </div>
+        </div>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-layout">
+                    <div class="about-left">
+                        <div class="section-tag fade-up">About Us</div>
+                        <div class="about-title fade-up">关于我们</div>
+                        <div class="about-subtitle fade-up">天枢互联 · Dubhe Nexus</div>
+                        <div class="about-text fade-up">
+                            <p>天枢互联 Dubhe Nexus 是一个专注于模拟飞行领域的独立开发团队。我们最初从大型社区平台起步，现已转型为以「轻量工具 + 数据服务」为核心的敏捷开发模式。</p>
+                            <p>我们的核心业务包括：<strong>航空数据 API</strong>（提供专业且易用的公开数据接口）、<strong>社区运营系统</strong>以及多项<strong>实用工具</strong>。我们不是在做产品堆砌，而是在寻找解决行业痛点的最优路径。</p>
+                            <p>团队信奉「简约、高效、实用」的价值观。我们的策略非常明确：快速构建、低成本维护、反馈驱动，避免在项目早期引入不必要的复杂性。</p>
+                        </div>
+                        <div class="about-note fade-up">当前重点：数据接口优化 · 提升系统稳定性 · 核心工具维护</div>
                     </div>
                     <div class="about-right fade-right">
-                        <p>天枢互联 Dubhe Nexus 是一个专注于模拟飞行领域的独立开发团队。我们最初从大型社区平台起步，现已转型为以「轻量工具 + 数据服务」为核心的敏捷开发模式。</p>
-                        <p>我们的核心业务包括：<strong style="font-weight: 500;">航空数据 API</strong>（提供专业且易用的公开数据接口）、
-                            <strong style="font-weight: 500;">社区运营系统</strong>以及多项
-                            <strong style="font-weight: 500;">实用工具</strong>。我们不是在做产品堆砌，而是在寻找解决行业痛点的最优路径。
-                        </p>
-                        <p>团队信奉「简约、高效、实用」的价值观。我们的策略非常明确：快速构建、低成本维护、反馈驱动，避免在项目早期引入不必要的复杂性。</p>
-                        <p class="note">当前重点：数据接口优化 · 提升系统稳定性 · 核心工具维护</p>
-                    </div>
-                </div>
-            </section>
-
-            <div class="info-section">
-                <div class="info-block fade-left">
-                    <h3>敏捷开发空间</h3>
-                    <p>天枢互联不追求商业规模，我们更看重技术的灵活性与实际应用。项目的推进方式偏向轻量化，旨在通过快速迭代满足模拟飞行爱好者与开发者的真实需求。</p>
-                </div>
-                <div class="info-block fade-right">
-                    <h3>服务保障</h3>
-                    <p>虽然项目处于成长期，部分接口和功能可能会根据技术架构进行优化调整，但我们会尽力保障核心服务的稳定性。欢迎广大用户提供建议与反馈。</p>
-                    <div class="info-tags">
-                        <span>持续迭代</span>
-                        <span>效率优先</span>
-                        <span>技术开放</span>
+                        <div class="about-image-stack">
+                            <div class="img-frame about-img-main parallax-img" data-speed="0.08">
+                                <img src="images/about-img.JPG" alt="About Dubhe Nexus">
+                            </div>
+                            <div class="about-stat-card">
+                                <div class="stat-number">5+</div>
+                                <div class="stat-label">个在线项目</div>
+                            </div>
+                            <div class="about-stat-card stat-card-2">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">服务可用性</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-        </div>
+        <!-- 信息区 -->
+        <section class="info-section">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-block fade-left">
+                        <h3>敏捷开发空间</h3>
+                        <p>天枢互联不追求商业规模，我们更看重技术的灵活性与实际应用。项目的推进方式偏向轻量化，旨在通过快速迭代满足模拟飞行爱好者与开发者的真实需求。</p>
+                    </div>
+                    <div class="info-block fade-right">
+                        <h3>服务保障</h3>
+                        <p>虽然项目处于成长期，部分接口和功能可能会根据技术架构进行优化调整，但我们会尽力保障核心服务的稳定性。欢迎广大用户提供建议与反馈。</p>
+                        <div class="info-tags">
+                            <span>持续迭代</span>
+                            <span>效率优先</span>
+                            <span>技术开放</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer id="contact" class="footer">
@@ -228,7 +326,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="footer-logo" style="display: flex; align-items: center; gap: 10px;">
-                        <img src="images/Dubhe Nexus 1.1.jpg" alt="Logo" style="height: 45px; border-radius: 3px;">
+                        <img src="images/Dubhe-Nexus.png" alt="Logo" style="height: 45px; border-radius: 3px;">
                         天枢互联创研工作室<br>Dubhe Nexus Innovation and Research Studio
                     </div>
                     <div class="footer-social" style="margin-top: 12px; display: flex; gap: 15px;">
