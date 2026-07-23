@@ -32,4 +32,4 @@ Explicitly declare the license link.
 
 **No Additional Restrictions** — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits, nor may you circumvent the restrictions of the established modules above.  
 
-Only applicable to pages or files explicitly marked as complying with the [Dubhe Nexus Software Open Source License](https://license.dubhenexus.org/dnl/) Agreement. See full legal text for complete provisions and module definitions.[index.html](index.html)[index.html](index.html)
+Only applicable to pages or files explicitly marked as complying with the [Dubhe Nexus Software Open Source License](https://license.dubhenexus.org/dnl/) Agreement. See full legal text for complete provisions and module definitions.
