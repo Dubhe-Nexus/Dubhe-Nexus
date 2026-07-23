@@ -811,6 +811,26 @@ h3 i, h3 svg {
     padding-top: 0.5rem;
 }
 
+.tech-intro {
+    margin-bottom: 2rem;
+    padding: 1.25rem;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s;
+}
+
+.tech-intro:hover {
+    border-color: #e0e0e0;
+}
+
+.tech-intro p {
+    font-size: 0.85rem;
+    color: #888;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
 @media (max-width: 900px) {
     .tech-layout {
         grid-template-columns: 1fr;
