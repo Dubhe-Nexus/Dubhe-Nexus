@@ -170,10 +170,72 @@ function initImageReveal() {
     });
 }
 
+// ===== 移动端折叠菜单 =====
+function initMobileNav() {
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+
+    if (!hamburger || !mobileNav || !mobileOverlay) return;
+
+    function openMenu() {
+        hamburger.classList.add('active');
+        mobileNav.classList.add('active');
+        mobileOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        hamburger.classList.remove('active');
+        mobileNav.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', () => {
+        if (hamburger.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    mobileOverlay.addEventListener('click', closeMenu);
+
+    // 移动端子菜单展开/折叠
+    const mobileParents = mobileNav.querySelectorAll('.mobile-parent');
+    mobileParents.forEach(parent => {
+        parent.addEventListener('click', function (e) {
+            // 如果 parent 是 <a> 且有子菜单，阻止默认跳转，改为展开子菜单
+            const sub = this.nextElementSibling;
+            if (sub && sub.classList.contains('mobile-sub')) {
+                // 点击箭头区域或父级文字区域时展开/折叠
+                this.classList.toggle('open');
+                e.preventDefault();
+            }
+        });
+    });
+
+    // 移动端菜单内的链接点击后关闭菜单（锚点链接除外，由 smoothScroll 处理）
+    mobileNav.querySelectorAll('a[href^="http"]').forEach(link => {
+        link.addEventListener('click', () => {
+            setTimeout(closeMenu, 150);
+        });
+    });
+
+    // ESC 键关闭
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && hamburger.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+}
+
 // 初始化所有效果
 document.addEventListener('DOMContentLoaded', () => {
     initParallax();
     initScrollAnimations();
     initSmoothScroll();
     initImageReveal();
+    initMobileNav();
 });
