@@ -202,22 +202,28 @@ function initMobileNav() {
 
     mobileOverlay.addEventListener('click', closeMenu);
 
-    // 移动端子菜单展开/折叠
-    const mobileParents = mobileNav.querySelectorAll('.mobile-parent');
-    mobileParents.forEach(parent => {
-        parent.addEventListener('click', function (e) {
-            // 如果 parent 是 <a> 且有子菜单，阻止默认跳转，改为展开子菜单
-            const sub = this.nextElementSibling;
-            if (sub && sub.classList.contains('mobile-sub')) {
-                // 点击箭头区域或父级文字区域时展开/折叠
-                this.classList.toggle('open');
-                e.preventDefault();
+    // 折叠按钮：只切换子菜单，不影响导航栏
+    const toggles = mobileNav.querySelectorAll('.mobile-toggle');
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const row = this.closest('.mobile-parent-row');
+            if (row) {
+                row.classList.toggle('open');
             }
         });
     });
 
-    // 移动端菜单内的链接点击后关闭菜单（锚点链接除外，由 smoothScroll 处理）
-    mobileNav.querySelectorAll('a[href^="http"]').forEach(link => {
+    // 子链接（外部跳转）点击后关闭菜单
+    mobileNav.querySelectorAll('.mobile-sub a[href^="http"]').forEach(link => {
+        link.addEventListener('click', () => {
+            setTimeout(closeMenu, 150);
+        });
+    });
+
+    // 子链接（锚点）点击后关闭菜单
+    mobileNav.querySelectorAll('.mobile-sub a[href^="#"]').forEach(link => {
         link.addEventListener('click', () => {
             setTimeout(closeMenu, 150);
         });
