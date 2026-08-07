@@ -1,5 +1,5 @@
 // Copyright (c) 2026 Dubhe Nexus Innovation and Research Studio
-// Licensed under MIT License
+// Licensed under DNL ATT-NC-SL
 
 let isNavScrolling = false;
 
