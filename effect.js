@@ -1,10 +1,8 @@
 // Copyright (c) 2026 Dubhe Nexus Innovation and Research Studio
 // Licensed under MIT License
 
-// 全局状态
 let isNavScrolling = false;
 
-// 滚动效果 - 导航栏
 window.addEventListener('scroll', () => {
     const navbar = document.getElementById('navbar');
     if (window.scrollY > 50) {
@@ -14,7 +12,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// 视差滚动效果 — 弹簧物理模拟
 function initParallax() {
     const parallaxElements = document.querySelectorAll('.parallax-img');
     const state = new Map();
@@ -31,7 +28,6 @@ function initParallax() {
     const damping = 0.75;
 
     function updateParallax() {
-        // 导航跳转期间暂停视差，节省资源
         if (isNavScrolling) {
             requestAnimationFrame(updateParallax);
             return;
@@ -67,7 +63,6 @@ function initParallax() {
     requestAnimationFrame(updateParallax);
 }
 
-// 滚动触发动画
 function initScrollAnimations() {
     const animatedElements = document.querySelectorAll('.fade-up, .fade-left, .fade-right, .scale-in');
 
@@ -89,7 +84,6 @@ function initScrollAnimations() {
     });
 }
 
-// 平滑滚动 — 自定义实现，跳转时暂停视差
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -105,7 +99,7 @@ function initSmoothScroll() {
 }
 
 function smoothScrollTo(target) {
-    const targetY = target.getBoundingClientRect().top + window.scrollY - 80; // 减去导航栏高度
+    const targetY = target.getBoundingClientRect().top + window.scrollY - 80;
     const startY = window.scrollY;
     const distance = targetY - startY;
     const duration = 800; // ms
@@ -130,7 +124,6 @@ function smoothScrollTo(target) {
         if (progress < 1) {
             requestAnimationFrame(step);
         } else {
-            // 滚动结束后短暂延迟再恢复视差，让最后一帧渲染完
             setTimeout(() => {
                 isNavScrolling = false;
             }, 50);
@@ -140,7 +133,6 @@ function smoothScrollTo(target) {
     requestAnimationFrame(step);
 }
 
-// 图片懒加载渐显效果
 function initImageReveal() {
     const images = document.querySelectorAll('.img-frame img, .hero-image');
 
@@ -170,7 +162,6 @@ function initImageReveal() {
     });
 }
 
-// ===== 移动端折叠菜单 =====
 function initMobileNav() {
     const hamburger = document.getElementById('hamburger');
     const mobileNav = document.getElementById('mobileNav');
@@ -202,34 +193,28 @@ function initMobileNav() {
 
     mobileOverlay.addEventListener('click', closeMenu);
 
-    // 折叠按钮：只切换子菜单，不影响导航栏
-    const toggles = mobileNav.querySelectorAll('.mobile-toggle');
-    toggles.forEach(toggle => {
-        toggle.addEventListener('click', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-            const row = this.closest('.mobile-parent-row');
-            if (row) {
-                row.classList.toggle('open');
-            }
-        });
+    mobileNav.querySelectorAll('.mobile-parent').forEach(parent => {
+        const arrow = parent.querySelector('.mobile-arrow');
+        if (arrow) {
+            arrow.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                parent.classList.toggle('open');
+            });
+        }
+        if (parent.tagName !== 'A') {
+            parent.addEventListener('click', () => {
+                parent.classList.toggle('open');
+            });
+        }
     });
 
-    // 子链接（外部跳转）点击后关闭菜单
-    mobileNav.querySelectorAll('.mobile-sub a[href^="http"]').forEach(link => {
+    mobileNav.querySelectorAll('a[href^="http"]').forEach(link => {
         link.addEventListener('click', () => {
             setTimeout(closeMenu, 150);
         });
     });
 
-    // 子链接（锚点）点击后关闭菜单
-    mobileNav.querySelectorAll('.mobile-sub a[href^="#"]').forEach(link => {
-        link.addEventListener('click', () => {
-            setTimeout(closeMenu, 150);
-        });
-    });
-
-    // ESC 键关闭
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && hamburger.classList.contains('active')) {
             closeMenu();
@@ -237,7 +222,6 @@ function initMobileNav() {
     });
 }
 
-// 初始化所有效果
 document.addEventListener('DOMContentLoaded', () => {
     initParallax();
     initScrollAnimations();
