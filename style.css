@@ -162,7 +162,7 @@ h3 i, h3 svg {
 }
 
 .nav-item .dropdown-arrow {
-    font-size: 9px;
+    font-size: 15px;
     transition: transform 0.3s ease;
     opacity: 0.5;
 }
